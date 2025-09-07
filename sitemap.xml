@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://poopscooprescue.com/</loc>
+    <loc>https://your-domain.vercel.app/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,21 +10,21 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://poopscooprescue.com/pricing.html</loc>
+    <loc>https://your-domain.vercel.app/pricing.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/locations.html</loc>
+    <loc>https://your-domain.vercel.app/locations.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/custom-area-request.html</loc>
+    <loc>https://your-domain.vercel.app/custom-area-request.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -32,126 +32,126 @@
   
   <!-- Jacksonville Area Service Pages -->
   <url>
-    <loc>https://poopscooprescue.com/arlington.html</loc>
+    <loc>https://your-domain.vercel.app/arlington.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/bartram-park.html</loc>
+    <loc>https://your-domain.vercel.app/bartram-park.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/baymeadows.html</loc>
+    <loc>https://your-domain.vercel.app/baymeadows.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/deerwood.html</loc>
+    <loc>https://your-domain.vercel.app/deerwood.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/downtown-jacksonville.html</loc>
+    <loc>https://your-domain.vercel.app/downtown-jacksonville.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/jacksonville-beach.html</loc>
+    <loc>https://your-domain.vercel.app/jacksonville-beach.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/julington-creek.html</loc>
+    <loc>https://your-domain.vercel.app/julington-creek.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/mandarin.html</loc>
+    <loc>https://your-domain.vercel.app/mandarin.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/northside.html</loc>
+    <loc>https://your-domain.vercel.app/northside.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/orange-park.html</loc>
+    <loc>https://your-domain.vercel.app/orange-park.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/ortega.html</loc>
+    <loc>https://your-domain.vercel.app/ortega.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/ponte-vedra.html</loc>
+    <loc>https://your-domain.vercel.app/ponte-vedra.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/riverside-avondale.html</loc>
+    <loc>https://your-domain.vercel.app/riverside-avondale.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/san-marco.html</loc>
+    <loc>https://your-domain.vercel.app/san-marco.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/southside.html</loc>
+    <loc>https://your-domain.vercel.app/southside.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/springfield.html</loc>
+    <loc>https://your-domain.vercel.app/springfield.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/st-johns-county.html</loc>
+    <loc>https://your-domain.vercel.app/st-johns-county.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://poopscooprescue.com/westside.html</loc>
+    <loc>https://your-domain.vercel.app/westside.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
