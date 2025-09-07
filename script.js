@@ -1,3 +1,19 @@
+// Load Navigation Component
+function loadNavigation() {
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => {
+            // Find all nav elements and replace them
+            const navElements = document.querySelectorAll('nav.navbar');
+            navElements.forEach(nav => {
+                nav.outerHTML = data;
+            });
+        })
+        .catch(error => {
+            console.log('Navigation component not found, using existing navigation');
+        });
+}
+
 // Mobile Navigation Functions
 function toggleMobileNav() {
     const mobileNav = document.getElementById('mobileNavMenu');
@@ -33,6 +49,8 @@ document.addEventListener('click', function(event) {
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Load navigation component
+    loadNavigation();
     // Smooth scrolling for anchor links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
