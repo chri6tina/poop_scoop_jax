@@ -1666,6 +1666,174 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Enhanced Pricing Hero Section */
+.pricing-hero {
+    background: linear-gradient(rgba(78, 205, 196, 0.1), rgba(78, 205, 196, 0.1)), url('poopscooprescuehero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-dark);
+    padding: 120px 0 80px;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 1;
+}
+
+.pricing-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--secondary-yellow);
+    color: var(--text-dark);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(255, 230, 109, 0.3);
+    animation: bounce 2s infinite;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.pricing-hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+    color: var(--text-dark);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    min-width: 200px;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.highlight-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.highlight-text strong {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.highlight-text span {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-cta .btn-primary,
+.hero-cta .btn-secondary {
+    padding: 18px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    display: inline-block;
+    text-align: center;
+    border: 2px solid transparent;
+    min-width: 200px;
+    white-space: nowrap;
+}
+
+.hero-cta .btn-primary {
+    background: var(--secondary-yellow);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(255, 230, 109, 0.3);
+}
+
+.hero-cta .btn-primary:hover {
+    background: #FFD93D;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 230, 109, 0.4);
+}
+
+.hero-cta .btn-secondary {
+    background: transparent;
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+.hero-cta .btn-secondary:hover {
+    background: var(--text-dark);
+    color: var(--accent-white);
+    transform: translateY(-3px);
+}
+
 /* Pricing Page Styles */
 .pricing-estimator {
     padding: 60px 0;
@@ -1926,6 +2094,60 @@ html {
 
 /* Responsive Design for Pricing Page */
 @media (max-width: 768px) {
+    .pricing-hero {
+        padding: 100px 0 60px;
+        min-height: 60vh;
+    }
+    
+    .pricing-hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .pricing-hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .pricing-highlights {
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .highlight-item {
+        min-width: 150px;
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .highlight-text {
+        text-align: center;
+    }
+    
+    .highlight-text strong {
+        font-size: 1.1rem;
+    }
+    
+    .highlight-text span {
+        font-size: 0.8rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .hero-cta .btn-primary,
+    .hero-cta .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
     .pricing-grid {
         grid-template-columns: 1fr;
     }
@@ -1955,6 +2177,26 @@ html {
     
     .faq-item {
         padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-hero-title {
+        font-size: 2rem;
+    }
+    
+    .pricing-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .pricing-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .highlight-item {
+        width: 100%;
+        max-width: 280px;
     }
 }
 
