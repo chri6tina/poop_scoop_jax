@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://poop-scoop-jax.vercel.app/sitemap.xml
+Sitemap: https://poopscoopjax.com/sitemap.xml
 
 # Disallow crawling of unnecessary files
 Disallow: /node_modules/
