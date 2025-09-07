@@ -1,13 +1,15 @@
 {
   "name": "poop-rescue",
   "version": "1.0.0",
-  "description": "Professional dog waste removal service website",
+  "description": "Professional dog waste removal service website - Static HTML Site",
   "main": "index.html",
+  "type": "module",
   "scripts": {
     "dev": "live-server",
     "start": "live-server",
-    "build": "echo 'No build process needed for static site'",
-    "preview": "live-server"
+    "build": "echo 'Static site - no build process needed'",
+    "preview": "live-server",
+    "vercel-build": "echo 'Static site - no build process needed'"
   },
   "keywords": [
     "dog-waste-removal",
