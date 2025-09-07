@@ -1,3 +1,36 @@
+// Mobile Navigation Functions
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNavMenu');
+    const toggleButton = document.querySelector('.mobile-nav-toggle');
+    
+    if (mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        toggleButton.innerHTML = '☰';
+    } else {
+        mobileNav.classList.add('active');
+        toggleButton.innerHTML = '✕';
+    }
+}
+
+function closeMobileNav() {
+    const mobileNav = document.getElementById('mobileNavMenu');
+    const toggleButton = document.querySelector('.mobile-nav-toggle');
+    
+    mobileNav.classList.remove('active');
+    toggleButton.innerHTML = '☰';
+}
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobileNavMenu');
+    const toggleButton = document.querySelector('.mobile-nav-toggle');
+    
+    if (!mobileNav.contains(event.target) && !toggleButton.contains(event.target)) {
+        mobileNav.classList.remove('active');
+        toggleButton.innerHTML = '☰';
+    }
+});
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links

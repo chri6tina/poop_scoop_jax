@@ -63,6 +63,9 @@
                 <div class="logo-icon">🐕‍🦺</div>
                 <span class="logo-text">Poop Rescue</span>
             </div>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu">
+                ☰
+            </button>
             <ul class="nav-menu">
                 <li><a href="#services">Services</a></li>
                 <li><a href="locations.html">Locations</a></li>
@@ -72,6 +75,17 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact" class="cta-button">Get Free Quote</a></li>
             </ul>
+            <div class="mobile-nav-menu" id="mobileNavMenu">
+                <ul>
+                    <li><a href="#services" onclick="closeMobileNav()">Services</a></li>
+                    <li><a href="locations.html" onclick="closeMobileNav()">Locations</a></li>
+                    <li><a href="pricing.html" onclick="closeMobileNav()">Pricing</a></li>
+                    <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="#testimonials" onclick="closeMobileNav()">Reviews</a></li>
+                    <li><a href="#faq" onclick="closeMobileNav()">FAQ</a></li>
+                    <li><a href="#contact" class="cta-button" onclick="closeMobileNav()">Get Free Quote</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
