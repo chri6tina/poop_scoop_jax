@@ -359,8 +359,6 @@ body {
 .estimate-result {
     margin-top: 6px;
     padding: 6px;
-    background: var(--primary-mint);
-    border-radius: 6px;
     text-align: center;
     flex-shrink: 0;
 }
@@ -371,7 +369,7 @@ body {
 
 .price-label {
     display: block;
-    color: var(--accent-white);
+    color: var(--text-dark);
     font-size: 0.65rem;
     margin-bottom: 2px;
 }
@@ -379,12 +377,12 @@ body {
 .price-value {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    color: var(--accent-white);
+    color: var(--text-dark);
     font-weight: 700;
 }
 
 .estimate-note {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     font-size: 0.55rem;
     font-style: italic;
 }
