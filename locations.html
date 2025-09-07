@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation will be loaded by JavaScript -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -46,484 +46,257 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="locations-hero">
         <div class="hero-overlay"></div>
-        <div class="hero-container single-card">
-            <div class="hero-card hero-content-card">
-                <div class="card-content">
-                    <h1 class="hero-title">Find Poop Rescue in Your Neighborhood! 🏘️</h1>
-                    <p class="hero-subtitle">We proudly serve 18+ locations across Jacksonville and surrounding areas. Find your neighborhood and get started with our professional dog waste removal service!</p>
-                    <div class="hero-buttons">
-                        <a href="#locations" class="btn-primary">View All Locations</a>
-                        <a href="/#contact" class="btn-secondary">Get Free Quote</a>
+        <div class="container">
+            <div class="locations-hero-content">
+                <h1 class="locations-hero-title">Service Locations Across Jacksonville</h1>
+                <p class="locations-hero-subtitle">Professional dog waste removal service in your neighborhood. Click any area below to learn more about our local service.</p>
+                
+                <div class="locations-hero-features">
+                    <div class="feature-badge">✓ 20+ Service Areas</div>
+                    <div class="feature-badge">✓ Professional Service</div>
+                    <div class="feature-badge">✓ Flexible Scheduling</div>
+                </div>
+                
+                <div class="locations-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Areas Served</div>
                     </div>
-                    <div class="hero-features">
-                        <div class="feature-badge">✓ 18+ Service Areas</div>
-                        <div class="feature-badge">✓ Professional Service</div>
-                        <div class="feature-badge">✓ Flexible Scheduling</div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Customers</div>
                     </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Days a Week</div>
+                    </div>
+                </div>
+                
+                <div class="locations-hero-buttons">
+                    <a href="/#contact" class="btn-primary">Schedule Service</a>
+                    <a href="tel:9042035012" class="btn-secondary">(904) 203-5012</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Locations Grid -->
-    <section id="locations" class="locations-main">
+    <!-- Featured Locations -->
+    <section class="featured-locations">
         <div class="container">
-            <div class="locations-grid">
-                <!-- Downtown Jacksonville -->
-                <div class="location-card featured">
-                    <div class="location-icon">🏙️</div>
-                    <h3>Downtown Jacksonville</h3>
-                    <p class="location-description">Central business district and surrounding residential areas</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Downtown, LaVilla, Brooklyn</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Friday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Apartment complexes welcome</span>
-                        </div>
+            <h2 class="section-title">Featured Service Areas</h2>
+            <p class="section-subtitle">Our most popular locations with premium service standards</p>
+            
+            <div class="featured-grid">
+                <a href="/ponte-vedra" class="featured-card">
+                    <div class="featured-badge">⭐ Featured</div>
+                    <div class="featured-icon">🏖️</div>
+                    <h3>Ponte Vedra</h3>
+                    <p>Luxury beachside service for exclusive communities</p>
+                    <div class="featured-details">
+                        <span class="detail">7 Days/Week</span>
+                        <span class="detail">Gated Communities</span>
+                        <span class="detail">Luxury Service</span>
                     </div>
-                    <a href="/downtown-jacksonville" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Riverside/Avondale -->
-                <div class="location-card">
+                <a href="/san-marco" class="featured-card">
+                    <div class="featured-badge">⭐ Featured</div>
+                    <div class="featured-icon">🏛️</div>
+                    <h3>San Marco</h3>
+                    <p>Upscale neighborhood with elegant homes and gardens</p>
+                    <div class="featured-details">
+                        <span class="detail">6 Days/Week</span>
+                        <span class="detail">Premium Service</span>
+                        <span class="detail">Historic Area</span>
+                    </div>
+                </a>
+
+                <a href="/downtown-jacksonville" class="featured-card">
+                    <div class="featured-badge">⭐ Featured</div>
+                    <div class="featured-icon">🏙️</div>
+                    <h3>Downtown Jacksonville</h3>
+                    <p>Urban service for apartments and residential buildings</p>
+                    <div class="featured-details">
+                        <span class="detail">5 Days/Week</span>
+                        <span class="detail">Urban Specialist</span>
+                        <span class="detail">Apartments</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Locations Grid -->
+    <section class="all-locations">
+        <div class="container">
+            <h2 class="section-title">All Service Areas</h2>
+            <p class="section-subtitle">Complete coverage across Jacksonville and surrounding areas</p>
+            
+            <div class="locations-grid">
+                <a href="/riverside-avondale" class="location-card">
                     <div class="location-icon">🌳</div>
                     <h3>Riverside & Avondale</h3>
-                    <p class="location-description">Historic neighborhoods with beautiful homes and yards</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Riverside, Avondale, Murray Hill</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Historic district specialist</span>
-                        </div>
+                    <p>Historic neighborhoods with beautiful homes</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Historic Specialist</span>
                     </div>
-                    <a href="/riverside-avondale" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- San Marco -->
-                <div class="location-card">
-                    <div class="location-icon">🏛️</div>
-                    <h3>San Marco</h3>
-                    <p class="location-description">Upscale neighborhood with elegant homes and gardens</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">San Marco, Southbank</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Tuesday - Sunday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Premium service available</span>
-                        </div>
-                    </div>
-                    <a href="/san-marco" class="location-cta">View Details</a>
-                </div>
-
-                <!-- Mandarin -->
-                <div class="location-card">
+                <a href="/mandarin" class="location-card">
                     <div class="location-icon">🌿</div>
                     <h3>Mandarin</h3>
-                    <p class="location-description">Family-friendly area with spacious properties</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Mandarin, Julington Creek</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Large yards, family discounts</span>
-                        </div>
+                    <p>Family-friendly area with spacious properties</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Family Focused</span>
                     </div>
-                    <a href="/mandarin" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Ponte Vedra -->
-                <div class="location-card featured">
-                    <div class="location-icon">🏖️</div>
-                    <h3>Ponte Vedra</h3>
-                    <p class="location-description">Exclusive beachside community with luxury homes</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Ponte Vedra Beach, Sawgrass</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Sunday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Luxury service, gated communities</span>
-                        </div>
-                    </div>
-                    <a href="/ponte-vedra" class="location-cta">View Details</a>
-                </div>
-
-                <!-- Jacksonville Beach -->
-                <div class="location-card">
+                <a href="/jacksonville-beach" class="location-card">
                     <div class="location-icon">🌊</div>
                     <h3>Jacksonville Beach</h3>
-                    <p class="location-description">Beachside living with oceanfront properties</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Jax Beach, Neptune Beach, Atlantic Beach</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Salt air considerations</span>
-                        </div>
+                    <p>Beachside living with oceanfront properties</p>
+                    <div class="location-meta">
+                        <span class="service-days">7 Days</span>
+                        <span class="service-type">Beachside</span>
                     </div>
-                    <a href="/jacksonville-beach" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Southside -->
-                <div class="location-card">
+                <a href="/southside" class="location-card">
                     <div class="location-icon">🏢</div>
                     <h3>Southside</h3>
-                    <p class="location-description">Modern suburban area with mixed residential and commercial</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Southside, Baymeadows, Deerwood</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Friday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Business district friendly</span>
-                        </div>
+                    <p>Modern suburban area with mixed residential</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Commercial</span>
                     </div>
-                    <a href="/southside" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Arlington -->
-                <div class="location-card">
+                <a href="/arlington" class="location-card">
                     <div class="location-icon">🌲</div>
                     <h3>Arlington</h3>
-                    <p class="location-description">Established neighborhood with mature trees and yards</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Arlington, Regency, Fort Caroline</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Tuesday - Sunday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Mature landscaping specialist</span>
-                        </div>
+                    <p>Established neighborhood with mature trees</p>
+                    <div class="location-meta">
+                        <span class="service-days">Tue-Sun</span>
+                        <span class="service-type">Mature Landscaping</span>
                     </div>
-                    <a href="/arlington" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Westside -->
-                <div class="location-card">
+                <a href="/westside" class="location-card">
                     <div class="location-icon">🏘️</div>
                     <h3>Westside</h3>
-                    <p class="location-description">Diverse residential area with family homes</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Westside, Wesconnett, Cedar Hills</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Family-friendly pricing</span>
-                        </div>
+                    <p>Diverse residential area with family homes</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Family Friendly</span>
                     </div>
-                    <a href="/westside" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Northside -->
-                <div class="location-card">
+                <a href="/northside" class="location-card">
                     <div class="location-icon">🌳</div>
                     <h3>Northside</h3>
-                    <p class="location-description">Growing area with new developments and established communities</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Northside, Oceanway, Dinsmore</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">New construction specialist</span>
-                        </div>
+                    <p>Growing area with new developments</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">New Development</span>
                     </div>
-                    <a href="/northside" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Orange Park -->
-                <div class="location-card">
+                <a href="/orange-park" class="location-card">
                     <div class="location-icon">🏡</div>
                     <h3>Orange Park</h3>
-                    <p class="location-description">Suburban community with established neighborhoods</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Orange Park, Fleming Island</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Tuesday - Sunday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Clay County specialist</span>
-                        </div>
+                    <p>Suburban community with established neighborhoods</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Suburban</span>
                     </div>
-                    <a href="/orange-park" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Springfield -->
-                <div class="location-card">
+                <a href="/springfield" class="location-card">
                     <div class="location-icon">🏛️</div>
                     <h3>Springfield</h3>
-                    <p class="location-description">Historic neighborhood with restored Victorian homes</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Springfield, Eastside</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Historic preservation specialist</span>
-                        </div>
+                    <p>Historic neighborhood with Victorian homes</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Historic Homes</span>
                     </div>
-                    <a href="/springfield" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Ortega -->
-                <div class="location-card">
+                <a href="/ortega" class="location-card">
                     <div class="location-icon">🌊</div>
                     <h3>Ortega</h3>
-                    <p class="location-description">Waterfront community with riverfront properties</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Ortega, Ortega Farms</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Tuesday - Sunday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Waterfront specialist</span>
-                        </div>
+                    <p>Waterfront community with riverfront properties</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Waterfront</span>
                     </div>
-                    <a href="/ortega" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Baymeadows -->
-                <div class="location-card">
-                    <div class="location-icon">🏢</div>
-                    <h3>Baymeadows</h3>
-                    <p class="location-description">Business district with surrounding residential areas</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Baymeadows, Baymeadows West</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Friday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Corporate accounts welcome</span>
-                        </div>
-                    </div>
-                    <a href="/baymeadows" class="location-cta">View Details</a>
-                </div>
-
-                <!-- Bartram Park -->
-                <div class="location-card">
+                <a href="/bartram-park" class="location-card">
                     <div class="location-icon">🌳</div>
                     <h3>Bartram Park</h3>
-                    <p class="location-description">Newer development with modern homes and amenities</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Bartram Park, Bartram Springs</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">New construction specialist</span>
-                        </div>
+                    <p>Modern development with new construction</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">New Construction</span>
                     </div>
-                    <a href="/bartram-park" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Deerwood -->
-                <div class="location-card">
-                    <div class="location-icon">🏘️</div>
+                <a href="/baymeadows" class="location-card">
+                    <div class="location-icon">🏢</div>
+                    <h3>Baymeadows</h3>
+                    <p>Business district with residential communities</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Mixed Use</span>
+                    </div>
+                </a>
+
+                <a href="/deerwood" class="location-card">
+                    <div class="location-icon">🌲</div>
                     <h3>Deerwood</h3>
-                    <p class="location-description">Established community with golf course and amenities</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Deerwood, Deerwood Country Club</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Golf course community specialist</span>
-                        </div>
+                    <p>Upscale community with golf course amenities</p>
+                    <div class="location-meta">
+                        <span class="service-days">7 Days</span>
+                        <span class="service-type">Golf Course</span>
                     </div>
-                    <a href="/deerwood" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- Julington Creek -->
-                <div class="location-card">
+                <a href="/julington-creek" class="location-card">
                     <div class="location-icon">🌿</div>
                     <h3>Julington Creek</h3>
-                    <p class="location-description">Master-planned community with nature preserves</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">Julington Creek, Plantation</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">Monday - Saturday</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Nature preserve specialist</span>
-                        </div>
+                    <p>Family community with parks and recreation</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Family Recreation</span>
                     </div>
-                    <a href="/julington-creek" class="location-cta">View Details</a>
-                </div>
+                </a>
 
-                <!-- St. Johns County -->
-                <div class="location-card">
-                    <div class="location-icon">🌿</div>
+                <a href="/st-johns-county" class="location-card">
+                    <div class="location-icon">🏖️</div>
                     <h3>St. Johns County</h3>
-                    <p class="location-description">Extended service to St. Johns County areas</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Coverage:</span>
-                            <span class="detail-value">St. Augustine, Nocatee, World Golf Village</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Service Days:</span>
-                            <span class="detail-value">By appointment</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Special Notes:</span>
-                            <span class="detail-value">Travel fees may apply</span>
-                        </div>
+                    <p>Expanding service area with growing communities</p>
+                    <div class="location-meta">
+                        <span class="service-days">Mon-Sat</span>
+                        <span class="service-type">Growing Community</span>
                     </div>
-                    <a href="/#contact" class="location-cta">Request Service</a>
-                </div>
-
-                <!-- Custom Area Request -->
-                <div class="location-card custom">
-                    <div class="location-icon">📍</div>
-                    <h3>Don't See Your Area?</h3>
-                    <p class="location-description">We're always looking to expand our Jacksonville service areas</p>
-                    <div class="location-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Request Service:</span>
-                            <span class="detail-value">Contact us to discuss</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Minimum Requirements:</span>
-                            <span class="detail-value">5+ customers in area</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Response Time:</span>
-                            <span class="detail-value">Within 24 hours</span>
-                        </div>
-                    </div>
-                    <a href="/custom-area-request" class="location-cta">Request New Area</a>
-                </div>
-            </div>
-
-            <!-- Service Information -->
-            <div class="service-info">
-                <h2>Service Information</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>📅 Scheduling</h3>
-                        <p>Flexible scheduling options including weekly, bi-weekly, monthly, or one-time service</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🌱 Eco-Friendly</h3>
-                        <p>Biodegradable bags and composting practices for environmentally conscious disposal</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🎁 Professional Service</h3>
-                        <p>New customers receive their first cleanup absolutely free - no strings attached!</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🌸 Optional Deodorizing</h3>
-                        <p>Add eco-friendly yard deodorizing to keep your outdoor space fresh and pleasant</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="locations-cta-section">
+    <section class="locations-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Get Started?</h2>
-                <p>Contact us today to schedule your free initial cleanup or to discuss service in your area.</p>
+                <h2>Don't See Your Area?</h2>
+                <p>We're always expanding our service areas. Contact us to check if we can serve your location!</p>
                 <div class="cta-buttons">
-                    <a href="/#contact" class="btn-primary">Get Free Quote</a>
-                    <a href="tel:555-123-POOP" class="btn-secondary">Call (555) 123-POOP</a>
+                    <a href="/#contact" class="btn-primary">Request Service</a>
+                    <a href="tel:9042035012" class="btn-secondary">Call (904) 203-5012</a>
                 </div>
             </div>
         </div>
@@ -540,7 +313,7 @@
                     </div>
                     <p class="footer-description">Professional dog waste removal service that's flexible, eco-friendly, and absolutely hassle-free. We love dogs as much as you do!</p>
                     <div class="footer-contact">
-                        <p><strong>📞 (904) 555-POOP</strong></p>
+                        <p><strong>📞 (904) 203-5012</strong></p>
                         <p><strong>📧 hello@pooprescue.com</strong></p>
                         <p><strong>📍 Serving Jacksonville & Surrounding Areas</strong></p>
                     </div>
@@ -549,11 +322,11 @@
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul class="footer-links">
+                        <li><a href="/pricing">Pricing & Packages</a></li>
                         <li><a href="/#services">Regular Cleanup</a></li>
-                        <li><a href="/#services">One-Time Service</a></li>
-                        <li><a href="/#services">Deodorizing</a></li>
-                        <li><a href="/#services">Hose Down Service</a></li>
-                        <li><a href="/#services">Eco-Friendly Solutions</a></li>
+                        <li><a href="/pricing">One-Time Service</a></li>
+                        <li><a href="/pricing">Deodorizing</a></li>
+                        <li><a href="/pricing">Hose Down Service</a></li>
                     </ul>
                 </div>
                 
