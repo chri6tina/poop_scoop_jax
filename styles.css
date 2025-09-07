@@ -139,7 +139,7 @@ body {
     padding-top: 40px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     z-index: 2;
     width: 100%;
@@ -153,7 +153,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    margin-top: -50px;
+    margin: 0 auto;
 }
 
 /* Single card hero section for location pages */
