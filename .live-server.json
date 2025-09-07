@@ -1,0 +1,16 @@
+{
+  "port": 3000,
+  "host": "localhost",
+  "root": ".",
+  "open": "/index.html",
+  "ignore": [
+    "node_modules/**",
+    "**/node_modules/**",
+    "*.log",
+    ".DS_Store",
+    "package-lock.json"
+  ],
+  "file": "index.html",
+  "wait": 1000,
+  "logLevel": 0
+}

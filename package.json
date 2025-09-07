@@ -1,0 +1,29 @@
+{
+  "name": "poop-rescue",
+  "version": "1.0.0",
+  "description": "Professional dog waste removal service website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server",
+    "start": "live-server",
+    "build": "echo 'No build process needed for static site'",
+    "preview": "live-server"
+  },
+  "keywords": [
+    "dog-waste-removal",
+    "pet-services",
+    "local-business",
+    "eco-friendly",
+    "yard-maintenance"
+  ],
+  "author": "Poop Rescue",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
