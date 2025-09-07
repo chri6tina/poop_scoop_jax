@@ -74,6 +74,12 @@ body {
     font-size: 28px;
 }
 
+.logo-image {
+    height: 35px; /* 28px * 1.25 = 35px for 25% increase */
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
