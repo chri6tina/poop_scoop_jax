@@ -114,10 +114,11 @@ body {
     background-repeat: no-repeat;
     color: var(--text-dark);
     padding: 0;
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 70px; /* Account for fixed navbar */
     position: relative;
 }
 
@@ -135,7 +136,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--container-padding);
-    padding-top: 120px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -1515,7 +1516,7 @@ body {
     
     .hero-container {
         min-height: auto;
-        padding: 80px 15px 30px 15px;
+        padding: 40px 15px 30px 15px;
     }
     
     .hero-grid {
@@ -1837,7 +1838,7 @@ body {
 @media (max-width: 480px) {
     /* Extra small mobile devices */
     .hero-container {
-        padding: 70px 10px 20px 10px;
+        padding: 30px 10px 20px 10px;
     }
     
     .hero-card {
