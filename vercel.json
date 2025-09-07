@@ -6,8 +6,88 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
+      "source": "/locations",
+      "destination": "/locations.html"
+    },
+    {
+      "source": "/arlington",
+      "destination": "/arlington.html"
+    },
+    {
+      "source": "/bartram-park",
+      "destination": "/bartram-park.html"
+    },
+    {
+      "source": "/baymeadows",
+      "destination": "/baymeadows.html"
+    },
+    {
+      "source": "/deerwood",
+      "destination": "/deerwood.html"
+    },
+    {
+      "source": "/downtown-jacksonville",
+      "destination": "/downtown-jacksonville.html"
+    },
+    {
+      "source": "/jacksonville-beach",
+      "destination": "/jacksonville-beach.html"
+    },
+    {
+      "source": "/julington-creek",
+      "destination": "/julington-creek.html"
+    },
+    {
+      "source": "/mandarin",
+      "destination": "/mandarin.html"
+    },
+    {
+      "source": "/northside",
+      "destination": "/northside.html"
+    },
+    {
+      "source": "/orange-park",
+      "destination": "/orange-park.html"
+    },
+    {
+      "source": "/ortega",
+      "destination": "/ortega.html"
+    },
+    {
+      "source": "/ponte-vedra",
+      "destination": "/ponte-vedra.html"
+    },
+    {
+      "source": "/riverside-avondale",
+      "destination": "/riverside-avondale.html"
+    },
+    {
+      "source": "/san-marco",
+      "destination": "/san-marco.html"
+    },
+    {
+      "source": "/southside",
+      "destination": "/southside.html"
+    },
+    {
+      "source": "/springfield",
+      "destination": "/springfield.html"
+    },
+    {
+      "source": "/st-johns-county",
+      "destination": "/st-johns-county.html"
+    },
+    {
+      "source": "/westside",
+      "destination": "/westside.html"
+    },
+    {
+      "source": "/custom-area-request",
+      "destination": "/custom-area-request.html"
     }
   ],
   "headers": [
