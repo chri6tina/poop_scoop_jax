@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "echo 'Static site - no build needed'",
+  "buildCommand": "echo 'Static site - no build needed - Poop Rescue Website'",
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install for static site'",
   "framework": null,
