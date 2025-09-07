@@ -1668,11 +1668,11 @@ html {
 
 /* Enhanced Pricing Hero Section */
 .pricing-hero {
-    background: linear-gradient(rgba(78, 205, 196, 0.1), rgba(78, 205, 196, 0.1)), url('poopscooprescuehero.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('poopscooprescuehero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--text-dark);
+    color: var(--accent-white);
     padding: 120px 0 80px;
     position: relative;
     min-height: 70vh;
@@ -1686,7 +1686,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -1722,19 +1722,20 @@ html {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 25px;
-    color: var(--text-dark);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--accent-white);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .pricing-hero-subtitle {
     font-size: 1.4rem;
     margin-bottom: 40px;
-    opacity: 0.9;
+    opacity: 0.95;
     line-height: 1.6;
-    color: var(--text-dark);
+    color: var(--accent-white);
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .pricing-highlights {
@@ -1749,18 +1750,20 @@ html {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px 25px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
     min-width: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .highlight-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 1);
 }
 
 .highlight-icon {
@@ -1824,14 +1827,16 @@ html {
 
 .hero-cta .btn-secondary {
     background: transparent;
-    color: var(--text-dark);
-    border-color: var(--text-dark);
+    color: var(--accent-white);
+    border-color: var(--accent-white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-cta .btn-secondary:hover {
-    background: var(--text-dark);
-    color: var(--accent-white);
+    background: var(--accent-white);
+    color: var(--primary-mint);
     transform: translateY(-3px);
+    text-shadow: none;
 }
 
 /* Pricing Page Styles */
