@@ -4,7 +4,6 @@
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install for static site'",
   "framework": null,
-  "functions": {},
   "rewrites": [
     {
       "source": "/(.*)",
