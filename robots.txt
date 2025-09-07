@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://poopscooprescue.com/sitemap.xml
+
+# Disallow crawling of unnecessary files
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.DS_Store
+Disallow: /package*.json
+Disallow: /script.js
+Disallow: /styles.css
+
+# Allow all HTML pages
+Allow: /*.html
+Allow: /index.html
