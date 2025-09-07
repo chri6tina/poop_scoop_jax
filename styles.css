@@ -422,22 +422,24 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--primary-mint);
-    color: var(--accent-white);
+    background: var(--secondary-yellow);
+    color: var(--text-dark);
     padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 230, 109, 0.3);
     transition: var(--transition);
+    border: 2px solid var(--secondary-yellow);
 }
 
 .phone-link:hover {
-    background: #3BA8A0;
+    background: #FFD93D;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-    color: var(--accent-white);
+    box-shadow: 0 6px 20px rgba(255, 230, 109, 0.4);
+    color: var(--text-dark);
+    border-color: #FFD93D;
 }
 
 .hero-subtitle {
@@ -1657,6 +1659,9 @@ body {
     .phone-link {
         font-size: 1rem;
         padding: 10px 16px;
+        background: var(--secondary-yellow);
+        color: var(--text-dark);
+        border: 2px solid var(--secondary-yellow);
     }
     
     .hero-subtitle {
