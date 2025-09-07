@@ -75,7 +75,7 @@ body {
 }
 
 .logo-image {
-    height: 50px; /* Much bigger logo */
+    height: 100px; /* Double the size - very prominent logo */
     width: auto;
     object-fit: contain;
 }
