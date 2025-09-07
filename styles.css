@@ -286,6 +286,8 @@ body {
     text-align: center;
     justify-content: flex-start;
     gap: 15px;
+    height: auto;
+    min-height: 500px;
 }
 
 .estimator-title {
@@ -1524,10 +1526,11 @@ body {
     }
     
     .hero-card {
-        aspect-ratio: 1;
-        height: 450px;
-        min-height: 450px;
+        aspect-ratio: unset;
+        height: auto;
+        min-height: 500px;
         margin: 0 10px;
+        max-height: none;
     }
     
     /* Single card responsive design */
@@ -1595,7 +1598,10 @@ body {
     
     .hero-content-card .card-content {
         text-align: center;
-        padding: 25px 15px;
+        padding: 20px 15px;
+        height: auto;
+        min-height: 500px;
+        justify-content: space-between;
     }
     
     .hero-features {
@@ -1654,7 +1660,9 @@ body {
     .estimator-card {
         max-width: 100%;
         padding: 20px 15px;
-        aspect-ratio: 1;
+        aspect-ratio: unset;
+        height: auto;
+        min-height: 500px;
         max-width: 320px;
         margin: 0 auto;
     }
@@ -1833,13 +1841,17 @@ body {
     }
     
     .hero-card {
-        height: 400px;
-        min-height: 400px;
+        height: auto;
+        min-height: 450px;
         margin: 0 5px;
+        aspect-ratio: unset;
     }
     
     .hero-content-card .card-content {
-        padding: 20px 12px;
+        padding: 15px 12px;
+        height: auto;
+        min-height: 450px;
+        justify-content: space-between;
     }
     
     .hero-title {
