@@ -150,6 +150,7 @@ body {
     z-index: 2;
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .hero-grid {
@@ -160,6 +161,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* Single card hero section for location pages */
@@ -295,7 +297,7 @@ body {
     gap: 10px;
     height: 100%;
     padding: 25px 20px;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .simple-estimator {
@@ -2618,6 +2620,8 @@ body {
     
 .hero-estimator-card {
     /* Keep the same dimensions as other hero cards */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .estimator-card {
