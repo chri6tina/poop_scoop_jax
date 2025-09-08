@@ -265,7 +265,7 @@ body {
     align-items: center;
     padding: 0;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     transition: var(--transition);
 }
 
@@ -291,10 +291,33 @@ body {
 
 .hero-estimator-card .card-content {
     text-align: center;
-    justify-content: flex-start;
-    gap: 15px;
-    height: auto;
-    min-height: 500px;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+    padding: 25px 20px;
+    overflow: visible;
+}
+
+.simple-estimator {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.simple-estimator .form-group {
+    margin-bottom: 8px;
+}
+
+.simple-estimator .form-group label {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.simple-estimator .form-group select {
+    padding: 8px 12px;
+    font-size: 0.85rem;
 }
 
 .estimator-title {
@@ -357,10 +380,12 @@ body {
 }
 
 .estimate-result {
-    margin-top: 6px;
-    padding: 6px;
+    margin-top: 8px;
+    padding: 8px;
     text-align: center;
     flex-shrink: 0;
+    background: rgba(78, 205, 196, 0.1);
+    border-radius: 8px;
 }
 
 .estimate-price {
@@ -2592,10 +2617,7 @@ body {
     }
     
 .hero-estimator-card {
-    aspect-ratio: unset !important;
-    height: auto !important;
-    min-height: 650px !important;
-    overflow: visible !important;
+    /* Keep the same dimensions as other hero cards */
 }
 
 .estimator-card {
