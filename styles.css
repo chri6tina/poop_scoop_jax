@@ -265,7 +265,7 @@ body {
     align-items: center;
     padding: 0;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     transition: var(--transition);
 }
 
@@ -2591,15 +2591,23 @@ body {
         justify-content: center;
     }
     
-    .estimator-card {
-        max-width: 100%;
-        padding: 20px 15px;
-        aspect-ratio: unset;
-        height: auto;
-        min-height: 500px;
-        max-width: 320px;
-        margin: 0 auto;
-    }
+.hero-estimator-card {
+    aspect-ratio: unset !important;
+    height: auto !important;
+    min-height: 650px !important;
+    overflow: visible !important;
+}
+
+.estimator-card {
+    max-width: 100%;
+    padding: 20px 15px;
+    aspect-ratio: unset;
+    height: auto;
+    min-height: 600px;
+    max-width: 320px;
+    margin: 0 auto;
+    overflow: visible;
+}
     
     .estimator-title {
         font-size: 1.3rem;
