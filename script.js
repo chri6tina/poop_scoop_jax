@@ -256,26 +256,26 @@ function calculateSimplePrice() {
         return;
     }
     
-    // Simple pricing
+    // Pricing based on main pricing page
     let basePrice = 0;
-    if (frequency === 'weekly') basePrice = 20;
-    else if (frequency === 'twice-weekly') basePrice = 18;
-    else if (frequency === 'bi-weekly') basePrice = 31;
-    else if (frequency === 'monthly') basePrice = 60;
-    else if (frequency === 'one-time') basePrice = 62;
+    if (frequency === 'weekly') basePrice = 15;
+    else if (frequency === 'twice-weekly') basePrice = 15; // Same as weekly
+    else if (frequency === 'bi-weekly') basePrice = 18;
+    else if (frequency === 'monthly') basePrice = 18; // Same as bi-weekly
+    else if (frequency === 'one-time') basePrice = 25;
     
     // Add for additional dogs
     if (dogs > 1) {
-        basePrice += (dogs - 1) * 6;
+        basePrice += (dogs - 1) * 3; // Reduced from $6 to $3 per additional dog
     }
     
     // Add for yard size
-    if (yardSize === 'medium') basePrice += 8;
-    else if (yardSize === 'large') basePrice += 15;
+    if (yardSize === 'medium') basePrice += 5; // Reduced from $8 to $5
+    else if (yardSize === 'large') basePrice += 10; // Reduced from $15 to $10
     
-    // Add for services
-    if (deodorizing) basePrice += 15;
-    if (hoseDown) basePrice += 15;
+    // Add for services (matching main pricing page)
+    if (deodorizing) basePrice += 5; // Reduced from $15 to $5
+    if (hoseDown) basePrice += 8; // Reduced from $15 to $8
     
     priceValue.textContent = '$' + Math.round(basePrice);
 }
