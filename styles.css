@@ -2508,6 +2508,11 @@ body {
         margin-bottom: 15px;
     }
     
+    /* Hide hero overlay on mobile for cleaner look */
+    .hero-overlay {
+        display: none;
+    }
+    
     .hero-container.single-card .hero-subtitle {
         font-size: 1rem;
         margin-bottom: 25px;
