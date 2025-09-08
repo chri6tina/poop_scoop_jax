@@ -3501,13 +3501,13 @@ html {
 
 .modal-content {
     background-color: var(--accent-white);
-    margin: 5% auto;
+    margin: 2% auto;
     padding: 0;
     border-radius: 15px;
     width: 95%;
-    max-width: 700px;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-width: 800px;
+    max-height: 95vh;
+    overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     animation: modalSlideIn 0.3s ease-out;
 }
@@ -3552,18 +3552,20 @@ html {
 }
 
 .modal-body {
-    padding: 20px;
+    padding: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 20px;
     align-items: start;
+    max-height: calc(95vh - 80px);
+    overflow-y: auto;
 }
 
 .estimate-summary {
     background: var(--neutral-grey);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .estimate-summary h4 {
@@ -3599,7 +3601,7 @@ html {
 }
 
 .modal-body .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .modal-body label {
@@ -3613,7 +3615,7 @@ html {
 .modal-body input,
 .modal-body textarea {
     width: 100%;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border: 2px solid var(--neutral-grey);
     border-radius: 6px;
     font-size: 0.9rem;
@@ -3631,7 +3633,7 @@ html {
 
 .modal-body textarea {
     resize: vertical;
-    min-height: 60px;
+    min-height: 50px;
 }
 
 .btn-submit {
@@ -3665,21 +3667,23 @@ html {
     .modal-content {
         width: 95%;
         max-width: 500px;
-        margin: 10% auto;
+        margin: 5% auto;
+        max-height: 90vh;
     }
     
     .modal-body {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 15px;
+        gap: 15px;
+        padding: 12px;
+        max-height: calc(90vh - 60px);
     }
     
     .modal-header {
-        padding: 12px 15px;
+        padding: 10px 12px;
     }
     
     .modal-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 
