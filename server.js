@@ -16,7 +16,11 @@ const cleanUrls = [
   'custom-area-request', 'deerwood', 'downtown-jacksonville',
   'jacksonville-beach', 'julington-creek', 'mandarin', 'northside',
   'orange-park', 'ortega', 'ponte-vedra', 'riverside-avondale',
-  'san-marco', 'southside', 'springfield', 'st-johns-county', 'westside'
+  'san-marco', 'southside', 'springfield', 'st-johns-county', 'westside',
+  // Prestigious neighborhood pages
+  'queens-harbour', 'glen-kernan', 'pablo-creek-reserve', 
+  'jacksonville-golf-country-club', 'deercreek-country-club', 
+  'atlantic-beach-country-club'
 ];
 
 cleanUrls.forEach(url => {
