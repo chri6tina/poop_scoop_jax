@@ -2484,6 +2484,10 @@ body {
         min-height: 500px;
         margin: 0 10px;
         max-height: none;
+        /* Remove subtle outline/glow on mobile */
+        box-shadow: none;
+        backdrop-filter: none;
+        background: rgba(255, 255, 255, 1);
     }
     
     /* Single card responsive design */
