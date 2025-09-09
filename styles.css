@@ -320,19 +320,19 @@ body {
 
 .hero-estimator-card .card-content {
     text-align: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 15px;
     height: 100%;
-    padding: 25px 20px;
+    padding: 20px 20px;
     overflow: hidden;
 }
 
 .simple-estimator {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .simple-estimator .form-group {
@@ -353,7 +353,7 @@ body {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     color: var(--text-dark);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-align: center;
 }
 
