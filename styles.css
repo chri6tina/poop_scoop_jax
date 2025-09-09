@@ -292,6 +292,13 @@ body {
     padding-top: 20px;
 }
 
+.hero-content-card .btn-primary,
+.hero-content-card .btn-secondary {
+    min-width: 160px;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+}
+
 .hero-estimator-card .card-content {
     text-align: center;
     justify-content: space-between;
@@ -484,24 +491,25 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    max-width: 100%;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 18px 36px;
+    padding: 16px 28px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: var(--transition);
     display: inline-block;
     text-align: center;
     border: 2px solid transparent;
-    min-width: 220px;
+    min-width: 180px;
     white-space: nowrap;
 }
 
