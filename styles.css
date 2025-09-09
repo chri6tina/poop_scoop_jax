@@ -166,7 +166,7 @@ body {
     left: -20px;
     right: -20px;
     bottom: -20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     border-radius: 30px;
     z-index: -1;
 }
@@ -263,7 +263,8 @@ body {
     background: #ffffff;
     border-radius: 25px;
     backdrop-filter: none;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(255, 255, 255, 0.9);
+    box-shadow: none;
+    border: 3px solid #ffffff;
     aspect-ratio: 1;
     width: 100%;
     height: 550px;
@@ -292,7 +293,8 @@ body {
 
 .hero-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.9);
+    box-shadow: none;
+    border: 3px solid #ffffff;
 }
 
 .card-content {
