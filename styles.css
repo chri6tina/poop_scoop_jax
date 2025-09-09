@@ -136,7 +136,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--container-padding);
-    padding-top: 20px;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -145,7 +145,6 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    padding-top: 80px;
 }
 
 .hero-grid {
