@@ -124,7 +124,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 70px; /* Account for fixed navbar */
+    margin-top: 80px; /* Account for fixed navbar */
     position: relative;
 }
 
@@ -136,7 +136,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: var(--container-padding);
-    padding-top: 40px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
