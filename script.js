@@ -229,11 +229,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize simple estimator
     initializeSimpleEstimator();
+    
+    // Initialize form handlers
+    initializeFormHandlers();
 });
 
 // Simple estimator functionality
 function initializeSimpleEstimator() {
-    const inputs = document.querySelectorAll('.simple-estimator select, .simple-estimator input[type="checkbox"]');
+    // Handle both estimator forms
+    const inputs = document.querySelectorAll('.estimator-form select, .estimator-form input[type="checkbox"], .simple-estimator select, .simple-estimator input[type="checkbox"]');
     
     inputs.forEach(input => {
         input.addEventListener('change', calculateSimplePrice);
@@ -244,15 +248,30 @@ function initializeSimpleEstimator() {
 }
 
 function calculateSimplePrice() {
-    const frequency = document.getElementById('frequency').value;
-    const dogs = parseInt(document.getElementById('dogs').value) || 1;
-    const yardSize = document.getElementById('yard-size').value;
-    const deodorizing = document.getElementById('deodorizing').checked;
-    const hoseDown = document.getElementById('hose-down').checked;
-    const priceValue = document.getElementById('priceValue');
+    // Find all price value elements and update them
+    const priceElements = document.querySelectorAll('#priceValue');
+    
+    // Get values from the first available form (they should be the same)
+    const frequencySelect = document.getElementById('frequency');
+    const dogsSelect = document.getElementById('dogs');
+    const yardSizeSelect = document.getElementById('yard-size');
+    const deodorizingCheck = document.getElementById('deodorizing');
+    const hoseDownCheck = document.getElementById('hose-down');
+    
+    if (!frequencySelect || !dogsSelect || !yardSizeSelect || !deodorizingCheck || !hoseDownCheck) {
+        return;
+    }
+    
+    const frequency = frequencySelect.value;
+    const dogs = parseInt(dogsSelect.value) || 1;
+    const yardSize = yardSizeSelect.value;
+    const deodorizing = deodorizingCheck.checked;
+    const hoseDown = hoseDownCheck.checked;
     
     if (!frequency) {
-        priceValue.textContent = '$0';
+        priceElements.forEach(priceValue => {
+            priceValue.textContent = '$0';
+        });
         return;
     }
     
@@ -277,7 +296,10 @@ function calculateSimplePrice() {
     if (deodorizing) basePrice += 5; // Reduced from $15 to $5
     if (hoseDown) basePrice += 8; // Reduced from $15 to $8
     
-    priceValue.textContent = '$' + Math.round(basePrice);
+    const finalPrice = '$' + Math.round(basePrice);
+    priceElements.forEach(priceValue => {
+        priceValue.textContent = finalPrice;
+    });
 }
 
 // Utility function for smooth animations
@@ -338,8 +360,121 @@ function addScrollToTop() {
     });
 }
 
+// Form submission handlers
+function initializeFormHandlers() {
+    // Handle main contact form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            showThankYouPopup();
+            this.reset();
+        });
+    }
+    
+    // Handle estimate submission form
+    const estimateForm = document.getElementById('estimateSubmissionForm');
+    if (estimateForm) {
+        estimateForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            showThankYouPopup();
+            this.reset();
+        });
+    }
+    
+    // Handle custom area request form
+    const customAreaForm = document.getElementById('customAreaForm');
+    if (customAreaForm) {
+        customAreaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            showThankYouPopup();
+            this.reset();
+        });
+    }
+}
+
 // Initialize scroll-to-top button
 addScrollToTop();
+
+// Thank you popup functionality
+function showThankYouPopup() {
+    // Create popup overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    `;
+    
+    // Create popup content
+    const popup = document.createElement('div');
+    popup.style.cssText = `
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 400px;
+        margin: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.3s ease;
+    `;
+    
+    popup.innerHTML = `
+        <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
+        <h2 style="color: var(--primary-mint); margin-bottom: 15px; font-family: var(--font-heading);">Thank You!</h2>
+        <p style="color: var(--text-dark); margin-bottom: 25px; line-height: 1.6;">We've received your message and will get back to you within 24 hours.</p>
+        <button onclick="closeThankYouPopup()" style="
+            background: var(--primary-mint);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.background='var(--primary-teal)'" onmouseout="this.style.background='var(--primary-mint)'">
+            Close
+        </button>
+    `;
+    
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    
+    // Add CSS animations
+    if (!document.getElementById('popup-styles')) {
+        const style = document.createElement('style');
+        style.id = 'popup-styles';
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes slideIn {
+                from { transform: translateY(-50px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+
+function closeThankYouPopup() {
+    const overlay = document.querySelector('div[style*="position: fixed"]');
+    if (overlay) {
+        overlay.remove();
+        document.body.style.overflow = 'auto';
+    }
+}
 
 // Simple modal functionality
 function openEstimateModal() {

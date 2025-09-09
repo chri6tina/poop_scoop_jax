@@ -56,36 +56,113 @@
 
     <!-- Hero Section -->
     <section class="locations-hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="locations-hero-content">
-                <h1 class="locations-hero-title">Service Locations Across Jacksonville</h1>
-                <p class="locations-hero-subtitle">Professional dog waste removal service in your neighborhood. Click any area below to learn more about our local service.</p>
-                
-                <div class="locations-hero-features">
-                    <div class="feature-badge">✓ 20+ Service Areas</div>
-                    <div class="feature-badge">✓ Professional Service</div>
-                    <div class="feature-badge">✓ Flexible Scheduling</div>
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">📍</span>
+                        <span>20+ Service Areas</span>
+                    </div>
+                    <h1 class="hero-title">Service Locations Across Jacksonville</h1>
+                    <p class="hero-subtitle">Professional dog waste removal service in your neighborhood. We serve Jacksonville, Ponte Vedra, San Marco, Riverside, and all surrounding areas with trusted, reliable service.</p>
+                    <div class="hero-cities">
+                        <span class="city-item">Jacksonville</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Ponte Vedra</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">San Marco</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Riverside</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Avondale</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="/#contact" class="btn-primary">
+                            <span class="btn-icon">📅</span>
+                            Schedule Service
+                        </a>
+                        <a href="tel:9042035012" class="btn-secondary">
+                            <span class="btn-icon">📞</span>
+                            (904) 203-5012
+                        </a>
+                    </div>
+                    <div class="hero-trust-pills">
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">⭐</span>
+                            <span>5-Star Rated</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🔒</span>
+                            <span>Insured & Bonded</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🌱</span>
+                            <span>Eco-Friendly</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="locations-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">Areas Served</div>
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">Get Your Instant Estimate</h3>
+                            <p class="estimator-subtitle">Quick, accurate pricing in seconds</p>
+                        </div>
+                        <div class="estimator-form">
+                            <div class="form-group">
+                                <label for="frequency">Service Frequency</label>
+                                <select id="frequency" name="frequency" required>
+                                    <option value="">Select frequency</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="twice-weekly">Twice Weekly</option>
+                                    <option value="bi-weekly">Bi-weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="one-time">One-time</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dogs">Number of Dogs</label>
+                                <select id="dogs" name="dogs" required>
+                                    <option value="1">1 Dog</option>
+                                    <option value="2">2 Dogs</option>
+                                    <option value="3">3 Dogs</option>
+                                    <option value="4">4+ Dogs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yard-size">Yard Size</label>
+                                <select id="yard-size" name="yard-size" required>
+                                    <option value="small">Small (under 1/4 acre)</option>
+                                    <option value="medium">Medium (1/4 - 1/2 acre)</option>
+                                    <option value="large">Large (over 1/2 acre)</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="deodorizing" name="deodorizing">
+                                    <span class="checkmark"></span>
+                                    Deodorizing
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="hose-down" name="hose-down">
+                                    <span class="checkmark"></span>
+                                    Hose Down Service
+                                </label>
+                            </div>
+                            <div class="estimate-result">
+                                <div class="estimate-price">
+                                    <span class="price-label">Estimated Price:</span>
+                                    <span class="price-value" id="priceValue">$0</span>
+                                </div>
+                                <div class="estimate-note">Prices may vary based on specific needs</div>
+                            </div>
+                            <button type="button" class="btn-estimate" onclick="openEstimateModal()">
+                                Get My Estimate
+                            </button>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Happy Customers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">7</div>
-                        <div class="stat-label">Days a Week</div>
-                    </div>
-                </div>
-                
-                <div class="locations-hero-buttons">
-                    <a href="/#contact" class="btn-primary">Schedule Service</a>
-                    <a href="tel:9042035012" class="btn-secondary">(904) 203-5012</a>
                 </div>
             </div>
         </div>

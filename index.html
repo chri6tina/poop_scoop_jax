@@ -65,6 +65,9 @@
     </script>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation will be loaded by JavaScript -->
     <nav class="navbar">
         <div class="nav-container">
@@ -100,26 +103,63 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="main-content" class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-container">
             <div class="hero-grid">
-                <div class="hero-card hero-content-card">
-                    <div class="card-content">
-                        <h1 class="hero-title">Jacksonville's #1 Rated Poop Scoop Service! 🏆</h1>
-                        <p class="hero-subtitle">Professional dog waste removal service serving Jacksonville, Ponte Vedra, San Marco, Riverside, and all surrounding areas. Trusted by 500+ local pet owners with 5-star reviews!</p>
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn-primary">Schedule Service</a>
-                            <a href="tel:9042035012" class="btn-secondary">(904) 203-5012</a>
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🏆</span>
+                        <span>#1 Rated in Jacksonville</span>
+                    </div>
+                    <h1 class="hero-title">Jacksonville's #1 Rated Poop Scoop Service!</h1>
+                    <p class="hero-subtitle">Professional dog waste removal service serving Jacksonville, Ponte Vedra, San Marco, Riverside, and all surrounding areas. Trusted by 500+ local pet owners with 5-star reviews!</p>
+                    <div class="hero-cities">
+                        <span class="city-item">Jacksonville</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Ponte Vedra</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">San Marco</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Riverside</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Avondale</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <span class="btn-icon">📅</span>
+                            Schedule Service
+                        </a>
+                        <a href="tel:9042035012" class="btn-secondary">
+                            <span class="btn-icon">📞</span>
+                            (904) 203-5012
+                        </a>
+                    </div>
+                    <div class="hero-trust-pills">
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">⭐</span>
+                            <span>5-Star Rated</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🔒</span>
+                            <span>Insured & Bonded</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🌱</span>
+                            <span>Eco-Friendly</span>
                         </div>
                     </div>
                 </div>
-                <div class="hero-card hero-estimator-card">
-                    <div class="card-content">
-                        <h3 class="estimator-title">Get Your Instant Estimate</h3>
-                        <div class="simple-estimator">
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">Get Your Instant Estimate</h3>
+                            <p class="estimator-subtitle">Quick, accurate pricing in seconds</p>
+                        </div>
+                        <div class="estimator-form">
                             <div class="form-group">
                                 <label for="frequency">Service Frequency</label>
-                                <select id="frequency" name="frequency">
+                                <select id="frequency" name="frequency" required>
                                     <option value="">Select frequency</option>
                                     <option value="weekly">Weekly</option>
                                     <option value="twice-weekly">Twice Weekly</option>
@@ -130,7 +170,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="dogs">Number of Dogs</label>
-                                <select id="dogs" name="dogs">
+                                <select id="dogs" name="dogs" required>
                                     <option value="1">1 Dog</option>
                                     <option value="2">2 Dogs</option>
                                     <option value="3">3 Dogs</option>
@@ -139,20 +179,20 @@
                             </div>
                             <div class="form-group">
                                 <label for="yard-size">Yard Size</label>
-                                <select id="yard-size" name="yard-size">
+                                <select id="yard-size" name="yard-size" required>
                                     <option value="small">Small (under 1/4 acre)</option>
                                     <option value="medium">Medium (1/4 - 1/2 acre)</option>
                                     <option value="large">Large (over 1/2 acre)</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="deodorizing" name="deodorizing">
                                     <span class="checkmark"></span>
                                     Deodorizing
                                 </label>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
                                     <input type="checkbox" id="hose-down" name="hose-down">
                                     <span class="checkmark"></span>
@@ -164,9 +204,11 @@
                                     <span class="price-label">Estimated Price:</span>
                                     <span class="price-value" id="priceValue">$0</span>
                                 </div>
-                                <div class="estimate-note">*Prices may vary based on specific needs</div>
+                                <div class="estimate-note">Prices may vary based on specific needs</div>
                             </div>
-                            <button type="button" class="btn-estimate" onclick="openEstimateModal()">Get My Estimate</button>
+                            <button type="button" class="btn-estimate" onclick="openEstimateModal()">
+                                Get My Estimate
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -397,7 +439,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/mdklyrvl" method="POST">
+                    <form id="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>
@@ -458,7 +500,7 @@
                     </div>
                 </div>
                 
-                <form id="estimateSubmissionForm" action="https://formspree.io/f/mdklyrvl" method="POST">
+                <form id="estimateSubmissionForm">
                     <input type="hidden" name="frequency" id="formFrequency">
                     <input type="hidden" name="dogs" id="formDogs">
                     <input type="hidden" name="yard_size" id="formYardSize">

@@ -98,43 +98,113 @@
 
     <!-- Enhanced Hero Section -->
     <section class="pricing-hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="pricing-hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">💰</span>
-                    <span class="badge-text">Transparent Pricing</span>
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">💰</span>
+                        <span>Transparent Pricing</span>
+                    </div>
+                    <h1 class="hero-title">Poop Scoop Service Prices in Jacksonville FL</h1>
+                    <p class="hero-subtitle">Get honest, upfront pricing for professional dog waste removal across Jacksonville, Ponte Vedra, San Marco & surrounding areas. No hidden fees, no surprises!</p>
+                    <div class="hero-cities">
+                        <span class="city-item">Jacksonville</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Ponte Vedra</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">San Marco</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Riverside</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Avondale</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#pricing-estimator" class="btn-primary">
+                            <span class="btn-icon">💰</span>
+                            Get Instant Price
+                        </a>
+                        <a href="tel:9042035012" class="btn-secondary">
+                            <span class="btn-icon">📞</span>
+                            (904) 203-5012
+                        </a>
+                    </div>
+                    <div class="hero-trust-pills">
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🏆</span>
+                            <span>Starting at $15</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">✅</span>
+                            <span>No Hidden Fees</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🎯</span>
+                            <span>Instant Quotes</span>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="pricing-hero-title">Poop Scoop Service Prices in Jacksonville FL</h1>
-                <p class="pricing-hero-subtitle">Get honest, upfront pricing for professional dog waste removal across Jacksonville, Ponte Vedra, San Marco & surrounding areas. No hidden fees, no surprises!</p>
-                
-                <div class="pricing-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🏆</div>
-                        <div class="highlight-text">
-                            <strong>Starting at $15</strong>
-                            <span>per weekly visit</span>
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">Get Your Instant Estimate</h3>
+                            <p class="estimator-subtitle">Quick, accurate pricing in seconds</p>
+                        </div>
+                        <div class="estimator-form">
+                            <div class="form-group">
+                                <label for="frequency">Service Frequency</label>
+                                <select id="frequency" name="frequency" required>
+                                    <option value="">Select frequency</option>
+                                    <option value="weekly">Weekly</option>
+                                    <option value="twice-weekly">Twice Weekly</option>
+                                    <option value="bi-weekly">Bi-weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="one-time">One-time</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dogs">Number of Dogs</label>
+                                <select id="dogs" name="dogs" required>
+                                    <option value="1">1 Dog</option>
+                                    <option value="2">2 Dogs</option>
+                                    <option value="3">3 Dogs</option>
+                                    <option value="4">4+ Dogs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yard-size">Yard Size</label>
+                                <select id="yard-size" name="yard-size" required>
+                                    <option value="small">Small (under 1/4 acre)</option>
+                                    <option value="medium">Medium (1/4 - 1/2 acre)</option>
+                                    <option value="large">Large (over 1/2 acre)</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="deodorizing" name="deodorizing">
+                                    <span class="checkmark"></span>
+                                    Deodorizing
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="hose-down" name="hose-down">
+                                    <span class="checkmark"></span>
+                                    Hose Down Service
+                                </label>
+                            </div>
+                            <div class="estimate-result">
+                                <div class="estimate-price">
+                                    <span class="price-label">Estimated Price:</span>
+                                    <span class="price-value" id="priceValue">$0</span>
+                                </div>
+                                <div class="estimate-note">Prices may vary based on specific needs</div>
+                            </div>
+                            <button type="button" class="btn-estimate" onclick="openEstimateModal()">
+                                Get My Estimate
+                            </button>
                         </div>
                     </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">✅</div>
-                        <div class="highlight-text">
-                            <strong>No Hidden Fees</strong>
-                            <span>transparent pricing</span>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <div class="highlight-icon">🎯</div>
-                        <div class="highlight-text">
-                            <strong>Instant Quotes</strong>
-                            <span>get pricing now</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="#pricing-estimator" class="btn-primary">Get Instant Price</a>
-                    <a href="tel:9042035012" class="btn-secondary">Call (904) 203-5012</a>
                 </div>
             </div>
         </div>
