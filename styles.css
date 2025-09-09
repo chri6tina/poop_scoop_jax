@@ -114,7 +114,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('public/newhero.png');
+    background: url('public/newhero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,13 +129,7 @@ body {
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.05);
-    z-index: 1;
+    display: none;
 }
 
 .hero-container {
