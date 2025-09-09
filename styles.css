@@ -160,15 +160,7 @@ body {
 }
 
 .hero-grid::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background: #ffffff;
-    border-radius: 30px;
-    z-index: -1;
+    display: none;
 }
 
 /* Single card hero section for location pages */
@@ -263,8 +255,8 @@ body {
     background: #ffffff;
     border-radius: 25px;
     backdrop-filter: none;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
-    border: 2px solid #ffffff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     aspect-ratio: 1;
     width: 100%;
     height: 550px;
@@ -292,9 +284,9 @@ body {
 }
 
 .hero-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.12);
-    border: 2px solid #ffffff;
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .card-content {
