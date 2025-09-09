@@ -26,3 +26,7 @@ A locally owned dog waste removal business focused on flexible scheduling, eco-f
 - Optional yard deodorizing
 - Eco-friendly practices (biodegradable bags, composting)
 - Free initial cleanup for new customers
+
+## Roadmap
+
+See the rollout plan for locations and neighborhood pages in `ROADMAP.md`.
