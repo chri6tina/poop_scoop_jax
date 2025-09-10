@@ -2176,6 +2176,43 @@ body {
         font-size: 1.8rem;
     }
     
+    .cat-info {
+        padding: 60px 0;
+    }
+    
+    .cat-info-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .cat-info-card {
+        padding: 25px 20px;
+    }
+    
+    .cat-info-icon {
+        font-size: 2.5rem;
+    }
+    
+    .cat-info-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .fact-item {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .fact-number {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+    
     .locations-hero-title {
         font-size: 2.5rem;
     }
@@ -4281,6 +4318,104 @@ html {
     padding: 8px 0;
     color: var(--text-dark);
     font-weight: 500;
+}
+
+/* Cat Information Section */
+.cat-info {
+    padding: 80px 0;
+    background: var(--accent-white);
+}
+
+.cat-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cat-info-card {
+    background: var(--neutral-grey);
+    padding: 30px;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 197, 245, 0.1);
+}
+
+.cat-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 197, 245, 0.15);
+    border-color: var(--primary-teal);
+}
+
+.cat-info-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.cat-info-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cat-info-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cat-facts {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.cat-facts h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.fact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+    background: var(--neutral-grey);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-teal);
+}
+
+.fact-number {
+    background: var(--primary-teal);
+    color: var(--accent-white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.fact-item p {
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Cat Services Pricing Section */

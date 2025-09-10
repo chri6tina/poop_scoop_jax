@@ -611,8 +611,10 @@ function getYardSizeLabel(value) {
 function calculateCatPrice() {
     const catCount = parseInt(document.getElementById('catCount')?.value) || 1;
     const litterBoxCount = parseInt(document.getElementById('litterBoxCount')?.value) || 1;
+    const litterType = document.getElementById('litterType')?.value || 'clay';
     const frequency = document.getElementById('serviceFrequency')?.value || 'weekly';
     const deepClean = document.getElementById('deepClean')?.checked || false;
+    const odorControl = document.getElementById('odorControl')?.checked || false;
     
     // Base pricing for cat services
     let basePrice = 0;
@@ -628,9 +630,23 @@ function calculateCatPrice() {
         basePrice = litterBoxCount * 12; // $12 per box for 4+ boxes
     }
     
+    // Add litter type premium
+    const litterTypePremiums = {
+        'clay': 0,        // No premium for clay
+        'clumping': 2,    // +$2 for clumping
+        'crystal': 3,     // +$3 for crystal
+        'natural': 5      // +$5 for natural/biodegradable
+    };
+    basePrice += litterTypePremiums[litterType] || 0;
+    
     // Add deep clean service
     if (deepClean) {
         basePrice += 15; // Additional $15 for deep clean
+    }
+    
+    // Add odor control
+    if (odorControl) {
+        basePrice += 5; // Additional $5 for odor control
     }
     
     // Apply frequency multipliers
@@ -653,7 +669,7 @@ function calculateCatPrice() {
 // Initialize cat pricing calculator
 function initializeCatPricing() {
     // Add event listeners for cat pricing calculator
-    const catInputs = ['catCount', 'litterBoxCount', 'serviceFrequency', 'deepClean'];
+    const catInputs = ['catCount', 'litterBoxCount', 'litterType', 'serviceFrequency', 'deepClean', 'odorControl'];
     catInputs.forEach(inputId => {
         const element = document.getElementById(inputId);
         if (element) {
