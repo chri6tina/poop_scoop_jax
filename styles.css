@@ -476,6 +476,34 @@ body {
     margin: 0;
 }
 
+.pricing-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: rgba(0, 197, 245, 0.1);
+    border: 1px solid rgba(0, 197, 245, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.disclaimer-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.disclaimer-text {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.disclaimer-text strong {
+    color: var(--primary-teal);
+    font-weight: 600;
+}
+
 .btn-estimate {
     background: var(--primary-teal);
     color: var(--accent-white);
@@ -3255,6 +3283,15 @@ body {
     
     .estimator-title {
         font-size: 1.2rem;
+    }
+    
+    .pricing-disclaimer {
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .disclaimer-text {
+        font-size: 0.75rem;
     }
     
     .estimator-subtitle {
