@@ -3668,6 +3668,36 @@ html {
     font-size: 0.95rem;
 }
 
+.pricing-notice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, rgba(0, 197, 245, 0.1) 0%, rgba(0, 197, 245, 0.05) 100%);
+    border: 1px solid rgba(0, 197, 245, 0.2);
+    border-radius: var(--border-radius);
+    padding: 20px 25px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notice-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.notice-content {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.notice-content strong {
+    color: var(--primary-teal);
+    font-weight: 600;
+}
+
 .pricing-table-container {
     overflow-x: auto;
     margin-bottom: 40px;
@@ -3736,6 +3766,17 @@ html {
     font-weight: 400;
 }
 
+.frequency-disclaimer {
+    font-size: 0.8rem;
+    color: var(--primary-teal);
+    font-weight: 600;
+    background: rgba(0, 197, 245, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-top: 4px;
+    display: inline-block;
+}
+
 .price-cell {
     position: relative;
     min-width: 120px;
@@ -3752,6 +3793,14 @@ html {
     font-size: 0.85rem;
     color: var(--text-muted);
     font-weight: 500;
+}
+
+.price-breakdown {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 4px;
+    font-style: italic;
 }
 
 /* Mobile Pricing Cards */
@@ -4140,6 +4189,17 @@ html {
         width: 100%;
         max-width: 200px;
         justify-content: center;
+    }
+    
+    .pricing-notice {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+        margin-bottom: 25px;
+    }
+    
+    .notice-content {
+        font-size: 0.9rem;
     }
     
     .cta-buttons {

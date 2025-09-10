@@ -237,6 +237,27 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePricingToggle();
 });
 
+// Helper function to get visits per month based on frequency
+function getVisitsPerMonth(cell) {
+    // Find the row this cell belongs to
+    const row = cell.closest('tr');
+    const frequencyCell = row.querySelector('.frequency-cell');
+    const frequencyName = frequencyCell.querySelector('.frequency-name').textContent.toLowerCase();
+    
+    switch (frequencyName) {
+        case 'weekly':
+            return 4;
+        case '2x weekly':
+            return 8;
+        case 'bi-weekly':
+            return 2;
+        case 'monthly':
+            return 1;
+        default:
+            return 1;
+    }
+}
+
 // Initialize pricing toggle functionality
 function initializePricingToggle() {
     const toggleInputs = document.querySelectorAll('input[name="priceDisplay"]');
@@ -251,13 +272,24 @@ function initializePricingToggle() {
                 const perVisitPrice = cell.getAttribute('data-per-visit');
                 const priceAmount = cell.querySelector('.price-amount');
                 const pricePeriod = cell.querySelector('.price-period');
+                const priceBreakdown = cell.querySelector('.price-breakdown');
                 
                 if (displayType === 'per-visit') {
                     priceAmount.textContent = '$' + perVisitPrice;
                     pricePeriod.textContent = '/visit';
+                    if (priceBreakdown) {
+                        // Update breakdown to show per-visit pricing
+                        const visits = getVisitsPerMonth(cell);
+                        priceBreakdown.textContent = `$${perVisitPrice} per visit`;
+                    }
                 } else {
                     priceAmount.textContent = '$' + monthlyPrice;
                     pricePeriod.textContent = '/month';
+                    if (priceBreakdown) {
+                        // Update breakdown to show multiplication
+                        const visits = getVisitsPerMonth(cell);
+                        priceBreakdown.textContent = `$${perVisitPrice} × ${visits} visits`;
+                    }
                 }
             });
         });
