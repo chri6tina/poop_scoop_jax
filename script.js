@@ -617,17 +617,17 @@ function calculateCatPrice() {
     const odorControl = document.getElementById('odorControl')?.checked || false;
     
     // Base pricing for cat services
-    let basePrice = 0;
+    let perVisitPrice = 0;
     
     // Single box pricing
     if (litterBoxCount === 1) {
-        basePrice = 20; // $20 per visit for single box
+        perVisitPrice = 20; // $20 per visit for single box
     } else if (litterBoxCount === 2) {
-        basePrice = 30; // $30 per visit for 2 boxes
+        perVisitPrice = 30; // $30 per visit for 2 boxes
     } else if (litterBoxCount === 3) {
-        basePrice = 45; // $45 per visit for 3 boxes
+        perVisitPrice = 45; // $45 per visit for 3 boxes
     } else {
-        basePrice = litterBoxCount * 12; // $12 per box for 4+ boxes
+        perVisitPrice = litterBoxCount * 12; // $12 per box for 4+ boxes
     }
     
     // Add litter type premium
@@ -637,16 +637,16 @@ function calculateCatPrice() {
         'crystal': 3,     // +$3 for crystal
         'natural': 5      // +$5 for natural/biodegradable
     };
-    basePrice += litterTypePremiums[litterType] || 0;
+    perVisitPrice += litterTypePremiums[litterType] || 0;
     
     // Add deep clean service
     if (deepClean) {
-        basePrice += 15; // Additional $15 for deep clean
+        perVisitPrice += 15; // Additional $15 for deep clean
     }
     
     // Add odor control
     if (odorControl) {
-        basePrice += 5; // Additional $5 for odor control
+        perVisitPrice += 5; // Additional $5 for odor control
     }
     
     // Apply frequency multipliers
@@ -657,12 +657,103 @@ function calculateCatPrice() {
         'one-time': 1     // 1 visit
     };
     
-    const monthlyPrice = basePrice * frequencyMultipliers[frequency];
+    const visitsPerMonth = frequencyMultipliers[frequency] || 1;
+    const monthlyPrice = perVisitPrice * visitsPerMonth;
     
     // Update price display
     const priceElement = document.getElementById('catPriceValue');
+    const breakdownElement = document.getElementById('catPriceBreakdown');
+    
     if (priceElement) {
         priceElement.textContent = '$' + Math.round(monthlyPrice);
+    }
+    
+    if (breakdownElement) {
+        if (frequency === 'one-time') {
+            breakdownElement.innerHTML = `<small>One-time service: $${Math.round(perVisitPrice)}</small>`;
+        } else {
+            breakdownElement.innerHTML = `<small>Per visit: $${Math.round(perVisitPrice)} • ${visitsPerMonth} visits/month = $${Math.round(monthlyPrice)}</small>`;
+        }
+    }
+}
+
+// Cat Estimate Modal
+function openCatEstimateModal() {
+    const catCount = document.getElementById('catCount')?.value || '1';
+    const litterBoxCount = document.getElementById('litterBoxCount')?.value || '1';
+    const litterType = document.getElementById('litterType')?.value || 'clay';
+    const frequency = document.getElementById('serviceFrequency')?.value || 'weekly';
+    const deepClean = document.getElementById('deepClean')?.checked || false;
+    const odorControl = document.getElementById('odorControl')?.checked || false;
+    
+    // Calculate pricing
+    let perVisitPrice = 0;
+    if (litterBoxCount === '1') {
+        perVisitPrice = 20;
+    } else if (litterBoxCount === '2') {
+        perVisitPrice = 30;
+    } else if (litterBoxCount === '3') {
+        perVisitPrice = 45;
+    } else {
+        perVisitPrice = parseInt(litterBoxCount) * 12;
+    }
+    
+    const litterTypePremiums = { 'clay': 0, 'clumping': 2, 'crystal': 3, 'natural': 5 };
+    perVisitPrice += litterTypePremiums[litterType] || 0;
+    
+    if (deepClean) perVisitPrice += 15;
+    if (odorControl) perVisitPrice += 5;
+    
+    const frequencyMultipliers = { 'weekly': 4, 'bi-weekly': 2, 'monthly': 1, 'one-time': 1 };
+    const visitsPerMonth = frequencyMultipliers[frequency] || 1;
+    const monthlyPrice = perVisitPrice * visitsPerMonth;
+    
+    // Create modal content
+    const modalContent = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🐱 Your Litter Box Service Quote</h2>
+                <span class="close" onclick="closeThankYouPopup()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="quote-summary">
+                    <h3>Service Details:</h3>
+                    <ul>
+                        <li><strong>Cats:</strong> ${catCount} cat${catCount > 1 ? 's' : ''}</li>
+                        <li><strong>Litter Boxes:</strong> ${litterBoxCount} box${litterBoxCount > 1 ? 'es' : ''}</li>
+                        <li><strong>Litter Type:</strong> ${litterType.charAt(0).toUpperCase() + litterType.slice(1)}</li>
+                        <li><strong>Frequency:</strong> ${frequency.charAt(0).toUpperCase() + frequency.slice(1)}</li>
+                        ${deepClean ? '<li><strong>Deep Clean:</strong> Included</li>' : ''}
+                        ${odorControl ? '<li><strong>Odor Control:</strong> Included</li>' : ''}
+                    </ul>
+                    <div class="price-summary">
+                        <div class="price-item">
+                            <span>Per Visit:</span>
+                            <span>$${Math.round(perVisitPrice)}</span>
+                        </div>
+                        ${frequency !== 'one-time' ? `
+                        <div class="price-item">
+                            <span>Visits per Month:</span>
+                            <span>${visitsPerMonth}</span>
+                        </div>
+                        <div class="price-item total">
+                            <span>Monthly Total:</span>
+                            <span>$${Math.round(monthlyPrice)}</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
+                <p>Ready to get started? Contact us at <strong>(904) 203-5012</strong> or fill out our contact form below!</p>
+            </div>
+        </div>
+    `;
+    
+    // Show modal
+    const modal = document.getElementById('thankYouModal');
+    if (modal) {
+        modal.innerHTML = modalContent;
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     }
 }
 

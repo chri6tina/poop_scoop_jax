@@ -4418,6 +4418,226 @@ html {
     margin: 0;
 }
 
+/* Cat Estimator Styles */
+.cat-estimator-card {
+    background: var(--accent-white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 197, 245, 0.15);
+    border: 2px solid var(--primary-teal);
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-estimator-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-teal), var(--accent-yellow));
+}
+
+.cat-estimator-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cat-estimator-subtitle {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.cat-estimator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cat-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cat-form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.cat-form-group select {
+    padding: 12px 15px;
+    border: 2px solid var(--neutral-grey);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    background: var(--accent-white);
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+.cat-form-group select:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(0, 197, 245, 0.1);
+}
+
+.cat-addons {
+    background: var(--neutral-grey);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+}
+
+.cat-addons h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cat-checkbox-group {
+    margin-bottom: 12px;
+}
+
+.cat-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.cat-checkbox-label:hover {
+    background: rgba(0, 197, 245, 0.05);
+}
+
+.cat-checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.cat-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-teal);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.cat-checkbox-label input[type="checkbox"]:checked + .cat-checkmark {
+    background: var(--primary-teal);
+    color: var(--accent-white);
+}
+
+.cat-checkbox-label input[type="checkbox"]:checked + .cat-checkmark::after {
+    content: '✓';
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cat-checkbox-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cat-checkbox-text strong {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.cat-checkbox-text small {
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.cat-estimate-result {
+    background: linear-gradient(135deg, rgba(0, 197, 245, 0.1), rgba(255, 230, 109, 0.1));
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid rgba(0, 197, 245, 0.2);
+}
+
+.cat-price-display {
+    margin-bottom: 10px;
+}
+
+.cat-price-label {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.cat-price-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-teal);
+    margin-left: 10px;
+}
+
+.cat-price-breakdown {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.cat-pricing-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: rgba(0, 197, 245, 0.1);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 197, 245, 0.2);
+}
+
+.cat-note-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cat-note-text {
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.cat-btn-estimate {
+    background: linear-gradient(135deg, var(--primary-teal), var(--accent-yellow));
+    color: var(--accent-white);
+    border: none;
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 197, 245, 0.3);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cat-btn-estimate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 197, 245, 0.4);
+}
+
 /* Cat Services Pricing Section */
 .cat-services-pricing {
     padding: 80px 0;
