@@ -232,7 +232,37 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize form handlers
     initializeFormHandlers();
+    
+    // Initialize pricing toggle
+    initializePricingToggle();
 });
+
+// Initialize pricing toggle functionality
+function initializePricingToggle() {
+    const toggleInputs = document.querySelectorAll('input[name="priceDisplay"]');
+    const priceCells = document.querySelectorAll('.price-cell');
+    
+    toggleInputs.forEach(input => {
+        input.addEventListener('change', function() {
+            const displayType = this.value;
+            
+            priceCells.forEach(cell => {
+                const monthlyPrice = cell.getAttribute('data-monthly');
+                const perVisitPrice = cell.getAttribute('data-per-visit');
+                const priceAmount = cell.querySelector('.price-amount');
+                const pricePeriod = cell.querySelector('.price-period');
+                
+                if (displayType === 'per-visit') {
+                    priceAmount.textContent = '$' + perVisitPrice;
+                    pricePeriod.textContent = '/visit';
+                } else {
+                    priceAmount.textContent = '$' + monthlyPrice;
+                    pricePeriod.textContent = '/month';
+                }
+            });
+        });
+    });
+}
 
 // Simple estimator functionality
 function initializeSimpleEstimator() {
@@ -275,26 +305,29 @@ function calculateSimplePrice() {
         return;
     }
     
-    // Pricing based on main pricing page
+    // New pricing matrix based on frequency and number of dogs
     let basePrice = 0;
-    if (frequency === 'weekly') basePrice = 15;
-    else if (frequency === 'twice-weekly') basePrice = 15; // Same as weekly
-    else if (frequency === 'bi-weekly') basePrice = 18;
-    else if (frequency === 'monthly') basePrice = 18; // Same as bi-weekly
-    else if (frequency === 'one-time') basePrice = 25;
     
-    // Add for additional dogs
-    if (dogs > 1) {
-        basePrice += (dogs - 1) * 3; // Reduced from $6 to $3 per additional dog
-    }
+    // Pricing matrix: [1 dog, 2 dogs, 3 dogs, 4+ dogs]
+    const pricingMatrix = {
+        'weekly': [100, 110, 120, 130],
+        'twice-weekly': [180, 198, 216, 234],
+        'bi-weekly': [75, 82.50, 90, 97.50],
+        'monthly': [56.25, 61.88, 67.50, 73.13],
+        'one-time': [25, 27.50, 30, 32.50] // One-time pricing (per visit)
+    };
     
-    // Add for yard size
-    if (yardSize === 'medium') basePrice += 5; // Reduced from $8 to $5
-    else if (yardSize === 'large') basePrice += 10; // Reduced from $15 to $10
+    // Get base price from matrix
+    const dogIndex = Math.min(dogs - 1, 3); // Cap at 4+ dogs (index 3)
+    basePrice = pricingMatrix[frequency][dogIndex];
     
-    // Add for services (matching main pricing page)
-    if (deodorizing) basePrice += 5; // Reduced from $15 to $5
-    if (hoseDown) basePrice += 8; // Reduced from $15 to $8
+    // Add for yard size (small adjustments)
+    if (yardSize === 'medium') basePrice += 5;
+    else if (yardSize === 'large') basePrice += 10;
+    
+    // Add for services
+    if (deodorizing) basePrice += 5;
+    if (hoseDown) basePrice += 8;
     
     const finalPrice = '$' + Math.round(basePrice);
     priceElements.forEach(priceValue => {

@@ -276,71 +276,180 @@
         </div>
     </section>
 
-    <!-- Pricing Packages Section -->
-    <section class="pricing-packages">
+    <!-- Pricing Table Section -->
+    <section class="pricing-table-section">
         <div class="container">
-            <h2 class="section-title">Jacksonville Poop Scoop Service Packages</h2>
-            <p class="section-subtitle">Choose the perfect plan for your dog waste removal needs</p>
+            <h2 class="section-title">Jacksonville Poop Scoop Service Pricing</h2>
+            <p class="section-subtitle">Transparent pricing based on service frequency and number of dogs</p>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>One-Time Service</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">25</span>
-                            <span class="period">per visit</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>✓ Complete yard cleanup</li>
-                            <li>✓ Eco-friendly disposal</li>
-                            <li>✓ Perfect for special events</li>
-                            <li>✓ Before/after photos</li>
-                        </ul>
-                    </div>
-                    <a href="index.html#contact" class="btn-primary">Book Now</a>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Weekly Service</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">15</span>
-                            <span class="period">per visit</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>✓ Weekly yard maintenance</li>
-                            <li>✓ Consistent schedule</li>
-                            <li>✓ 10% discount on add-ons</li>
-                            <li>✓ Priority scheduling</li>
-                            <li>✓ Satisfaction guarantee</li>
-                        </ul>
+            <!-- Price Display Toggle -->
+            <div class="pricing-toggle">
+                <label class="toggle-label">
+                    <input type="radio" name="priceDisplay" value="monthly" checked>
+                    <span class="toggle-text">Monthly Pricing</span>
+                </label>
+                <label class="toggle-label">
+                    <input type="radio" name="priceDisplay" value="per-visit">
+                    <span class="toggle-text">Per Visit Pricing</span>
+                </label>
+            </div>
+            
+            <!-- Responsive Pricing Table -->
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th class="frequency-header">Service Frequency</th>
+                            <th class="dog-count">1 Dog</th>
+                            <th class="dog-count">2 Dogs</th>
+                            <th class="dog-count">3 Dogs</th>
+                            <th class="dog-count">4+ Dogs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pricing-row">
+                            <td class="frequency-cell">
+                                <div class="frequency-info">
+                                    <span class="frequency-name">Weekly</span>
+                                    <span class="frequency-desc">4 visits/month</span>
+                                </div>
+                            </td>
+                            <td class="price-cell" data-monthly="100" data-per-visit="25">
+                                <span class="price-amount">$100</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="110" data-per-visit="27.50">
+                                <span class="price-amount">$110</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="120" data-per-visit="30">
+                                <span class="price-amount">$120</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="130" data-per-visit="32.50">
+                                <span class="price-amount">$130</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                        </tr>
+                        <tr class="pricing-row">
+                            <td class="frequency-cell">
+                                <div class="frequency-info">
+                                    <span class="frequency-name">2x Weekly</span>
+                                    <span class="frequency-desc">8 visits/month</span>
+                                </div>
+                            </td>
+                            <td class="price-cell" data-monthly="180" data-per-visit="22.50">
+                                <span class="price-amount">$180</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="198" data-per-visit="24.75">
+                                <span class="price-amount">$198</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="216" data-per-visit="27">
+                                <span class="price-amount">$216</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="234" data-per-visit="29.25">
+                                <span class="price-amount">$234</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                        </tr>
+                        <tr class="pricing-row">
+                            <td class="frequency-cell">
+                                <div class="frequency-info">
+                                    <span class="frequency-name">Bi-Weekly</span>
+                                    <span class="frequency-desc">2 visits/month</span>
+                                </div>
+                            </td>
+                            <td class="price-cell" data-monthly="75" data-per-visit="37.50">
+                                <span class="price-amount">$75</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="82.50" data-per-visit="41.25">
+                                <span class="price-amount">$82.50</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="90" data-per-visit="45">
+                                <span class="price-amount">$90</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="97.50" data-per-visit="48.75">
+                                <span class="price-amount">$97.50</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                        </tr>
+                        <tr class="pricing-row">
+                            <td class="frequency-cell">
+                                <div class="frequency-info">
+                                    <span class="frequency-name">Monthly</span>
+                                    <span class="frequency-desc">1 visit/month</span>
+                                </div>
+                            </td>
+                            <td class="price-cell" data-monthly="56.25" data-per-visit="56.25">
+                                <span class="price-amount">$56.25</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="61.88" data-per-visit="61.88">
+                                <span class="price-amount">$61.88</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="67.50" data-per-visit="67.50">
+                                <span class="price-amount">$67.50</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                            <td class="price-cell" data-monthly="73.13" data-per-visit="73.13">
+                                <span class="price-amount">$73.13</span>
+                                <span class="price-period">/month</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Mobile Pricing Cards -->
+            <div class="mobile-pricing-cards">
+                <div class="mobile-pricing-card">
+                    <h3>Weekly Service</h3>
+                    <div class="mobile-prices">
+                        <div class="mobile-price">1 Dog: $100/month</div>
+                        <div class="mobile-price">2 Dogs: $110/month</div>
+                        <div class="mobile-price">3 Dogs: $120/month</div>
+                        <div class="mobile-price">4+ Dogs: $130/month</div>
                     </div>
                     <a href="index.html#contact" class="btn-primary">Get Started</a>
                 </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Bi-Weekly Service</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">18</span>
-                            <span class="period">per visit</span>
-                        </div>
+                
+                <div class="mobile-pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>2x Weekly Service</h3>
+                    <div class="mobile-prices">
+                        <div class="mobile-price">1 Dog: $180/month</div>
+                        <div class="mobile-price">2 Dogs: $198/month</div>
+                        <div class="mobile-price">3 Dogs: $216/month</div>
+                        <div class="mobile-price">4+ Dogs: $234/month</div>
                     </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li>✓ Every other week cleanup</li>
-                            <li>✓ Flexible scheduling</li>
-                            <li>✓ 5% discount on add-ons</li>
-                            <li>✓ Regular maintenance</li>
-                        </ul>
+                    <a href="index.html#contact" class="btn-primary">Get Started</a>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h3>Bi-Weekly Service</h3>
+                    <div class="mobile-prices">
+                        <div class="mobile-price">1 Dog: $75/month</div>
+                        <div class="mobile-price">2 Dogs: $82.50/month</div>
+                        <div class="mobile-price">3 Dogs: $90/month</div>
+                        <div class="mobile-price">4+ Dogs: $97.50/month</div>
+                    </div>
+                    <a href="index.html#contact" class="btn-primary">Choose Plan</a>
+                </div>
+                
+                <div class="mobile-pricing-card">
+                    <h3>Monthly Service</h3>
+                    <div class="mobile-prices">
+                        <div class="mobile-price">1 Dog: $56.25/month</div>
+                        <div class="mobile-price">2 Dogs: $61.88/month</div>
+                        <div class="mobile-price">3 Dogs: $67.50/month</div>
+                        <div class="mobile-price">4+ Dogs: $73.13/month</div>
                     </div>
                     <a href="index.html#contact" class="btn-primary">Choose Plan</a>
                 </div>
