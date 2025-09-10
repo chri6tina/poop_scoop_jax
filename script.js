@@ -235,6 +235,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize pricing toggle
     initializePricingToggle();
+    
+    // Initialize cat pricing calculator
+    initializeCatPricing();
 });
 
 // Helper function to get visits per month based on frequency
@@ -602,4 +605,62 @@ function getYardSizeLabel(value) {
         'large': 'Large (over 1/2 acre)'
     };
     return labels[value] || '-';
+}
+
+// Cat Pricing Calculator
+function calculateCatPrice() {
+    const catCount = parseInt(document.getElementById('catCount')?.value) || 1;
+    const litterBoxCount = parseInt(document.getElementById('litterBoxCount')?.value) || 1;
+    const frequency = document.getElementById('serviceFrequency')?.value || 'weekly';
+    const deepClean = document.getElementById('deepClean')?.checked || false;
+    
+    // Base pricing for cat services
+    let basePrice = 0;
+    
+    // Single box pricing
+    if (litterBoxCount === 1) {
+        basePrice = 20; // $20 per visit for single box
+    } else if (litterBoxCount === 2) {
+        basePrice = 30; // $30 per visit for 2 boxes
+    } else if (litterBoxCount === 3) {
+        basePrice = 45; // $45 per visit for 3 boxes
+    } else {
+        basePrice = litterBoxCount * 12; // $12 per box for 4+ boxes
+    }
+    
+    // Add deep clean service
+    if (deepClean) {
+        basePrice += 15; // Additional $15 for deep clean
+    }
+    
+    // Apply frequency multipliers
+    const frequencyMultipliers = {
+        'weekly': 4,      // 4 visits per month
+        'bi-weekly': 2,   // 2 visits per month
+        'monthly': 1,     // 1 visit per month
+        'one-time': 1     // 1 visit
+    };
+    
+    const monthlyPrice = basePrice * frequencyMultipliers[frequency];
+    
+    // Update price display
+    const priceElement = document.getElementById('catPriceValue');
+    if (priceElement) {
+        priceElement.textContent = '$' + Math.round(monthlyPrice);
+    }
+}
+
+// Initialize cat pricing calculator
+function initializeCatPricing() {
+    // Add event listeners for cat pricing calculator
+    const catInputs = ['catCount', 'litterBoxCount', 'serviceFrequency', 'deepClean'];
+    catInputs.forEach(inputId => {
+        const element = document.getElementById(inputId);
+        if (element) {
+            element.addEventListener('change', calculateCatPrice);
+        }
+    });
+    
+    // Initial calculation
+    calculateCatPrice();
 }
