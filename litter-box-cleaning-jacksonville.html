@@ -136,87 +136,80 @@
                     </div>
                 </div>
                 <div class="hero-estimator">
-                    <div class="cat-estimator-card" style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 10px 40px rgba(0, 197, 245, 0.15); border: 2px solid #00c5f5; position: relative; overflow: hidden; max-width: 400px; margin: 0 auto;">
-                        <h3 class="cat-estimator-title" style="font-family: 'Fredoka One', cursive; font-size: 1.5rem; color: #333; margin-bottom: 15px; text-align: center;">🐱 CAT LITTER BOX SERVICE CALCULATOR 🐱</h3>
-                        <p class="cat-estimator-subtitle" style="color: #666; margin-bottom: 20px; text-align: center;">Get an instant quote for your cat's litter box cleaning needs</p>
-                        <div class="cat-estimator-form" style="display: block;">
-                            <div class="cat-form-group" style="margin-bottom: 15px; display: block;">
-                                <label for="catCount" style="display: block; font-weight: 600; color: #333; margin-bottom: 5px;">How many cats do you have?</label>
-                                <select id="catCount" name="catCount" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px;">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">🐱 Cat Litter Box Service Calculator</h3>
+                            <p class="estimator-subtitle">Get an instant quote for your cat's litter box cleaning needs</p>
+                        </div>
+                        <div class="estimator-form">
+                            <div class="form-group">
+                                <label for="catCount">How many cats do you have?</label>
+                                <select id="catCount" name="catCount" required>
                                     <option value="1">1 Cat</option>
                                     <option value="2">2 Cats</option>
                                     <option value="3">3 Cats</option>
                                     <option value="4">4+ Cats</option>
                                 </select>
                             </div>
-                            <div class="cat-form-group" style="margin-bottom: 15px; display: block;">
-                                <label for="litterBoxCount" style="display: block; font-weight: 600; color: #333; margin-bottom: 5px;">How many litter boxes?</label>
-                                <select id="litterBoxCount" name="litterBoxCount" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px;">
+                            <div class="form-group">
+                                <label for="litterBoxCount">How many litter boxes?</label>
+                                <select id="litterBoxCount" name="litterBoxCount" required>
                                     <option value="1">1 Litter Box</option>
                                     <option value="2">2 Litter Boxes</option>
                                     <option value="3">3 Litter Boxes</option>
                                     <option value="4">4+ Litter Boxes</option>
                                 </select>
                             </div>
-                            <div class="cat-form-group" style="margin-bottom: 15px; display: block;">
-                                <label for="litterType" style="display: block; font-weight: 600; color: #333; margin-bottom: 5px;">What type of litter do you use?</label>
-                                <select id="litterType" name="litterType" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px;">
+                            <div class="form-group">
+                                <label for="litterType">What type of litter do you use?</label>
+                                <select id="litterType" name="litterType" required>
                                     <option value="clay">Clay Litter</option>
                                     <option value="clumping">Clumping Litter</option>
                                     <option value="crystal">Crystal Litter</option>
                                     <option value="natural">Natural/Biodegradable</option>
                                 </select>
                             </div>
-                            <div class="cat-form-group" style="margin-bottom: 15px; display: block;">
-                                <label for="serviceFrequency" style="display: block; font-weight: 600; color: #333; margin-bottom: 5px;">How often do you need service?</label>
-                                <select id="serviceFrequency" name="serviceFrequency" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px;">
+                            <div class="form-group">
+                                <label for="serviceFrequency">How often do you need service?</label>
+                                <select id="serviceFrequency" name="serviceFrequency" required>
                                     <option value="weekly">Weekly (4x/month)</option>
                                     <option value="bi-weekly">Bi-Weekly (2x/month)</option>
                                     <option value="monthly">Monthly (1x/month)</option>
                                     <option value="one-time">One-Time Service</option>
                                 </select>
                             </div>
-                            <div class="cat-addons">
-                                <h4>Add-on Services:</h4>
-                                <div class="cat-checkbox-group">
-                                    <label class="cat-checkbox-label">
-                                        <input type="checkbox" id="deepClean" name="deepClean">
-                                        <span class="cat-checkmark"></span>
-                                        <span class="cat-checkbox-text">
-                                            <strong>Deep Clean Service</strong>
-                                            <small>Complete sanitization & fresh setup (+$15)</small>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="cat-checkbox-group">
-                                    <label class="cat-checkbox-label">
-                                        <input type="checkbox" id="odorControl" name="odorControl">
-                                        <span class="cat-checkmark"></span>
-                                        <span class="cat-checkbox-text">
-                                            <strong>Odor Control Treatment</strong>
-                                            <small>Professional deodorizing (+$5)</small>
-                                        </span>
-                                    </label>
-                                </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="deepClean" name="deepClean">
+                                    <span class="checkmark"></span>
+                                    Deep Clean Service (+$15)
+                                </label>
                             </div>
-                            <div class="cat-estimate-result">
-                                <div class="cat-price-display">
-                                    <span class="cat-price-label">Your Monthly Cost:</span>
-                                    <span class="cat-price-value" id="catPriceValue">$0</span>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="odorControl" name="odorControl">
+                                    <span class="checkmark"></span>
+                                    Odor Control Treatment (+$5)
+                                </label>
+                            </div>
+                            <div class="estimate-result">
+                                <div class="price-display">
+                                    <span class="price-label">Your Monthly Cost:</span>
+                                    <span class="price-value" id="catPriceValue">$0</span>
                                 </div>
-                                <div class="cat-price-breakdown" id="catPriceBreakdown">
+                                <div class="price-breakdown" id="catPriceBreakdown">
                                     <small>Per visit: $0 • Monthly total: $0</small>
                                 </div>
-                                <div class="cat-pricing-note">
-                                    <div class="cat-note-icon">💡</div>
-                                    <div class="cat-note-text">
+                                <div class="pricing-note">
+                                    <div class="note-icon">💡</div>
+                                    <div class="note-text">
                                         <strong>Single box starts at $20/visit</strong><br>
                                         Multiple boxes get bulk discounts!
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="cat-btn-estimate" onclick="openCatEstimateModal()" style="width: 100%; background: #00c5f5; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 20px;">
-                                🐱 GET MY CAT LITTER BOX QUOTE NOW! 🐱
+                            <button type="button" class="btn-primary" onclick="openCatEstimateModal()">
+                                🐱 Get My Cat Quote
                             </button>
                         </div>
                     </div>
