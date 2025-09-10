@@ -8,7 +8,15 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files from the current directory
-app.use(express.static('.'));
+app.use(express.static('.', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.setHeader('Pragma', 'no-cache');
+      res.setHeader('Expires', '0');
+    }
+  }
+}));
 
 // Handle clean URLs - redirect /page to /page.html
 const cleanUrls = [
@@ -20,7 +28,9 @@ const cleanUrls = [
   // Prestigious neighborhood pages
   'queens-harbour', 'glen-kernan', 'pablo-creek-reserve', 
   'jacksonville-golf-country-club', 'deercreek-country-club', 
-  'atlantic-beach-country-club'
+  'atlantic-beach-country-club',
+  // Cat services
+  'litter-box-cleaning-jacksonville'
 ];
 
 cleanUrls.forEach(url => {
