@@ -2131,6 +2131,39 @@ body {
         font-size: 0.95rem;
     }
     
+    .cat-services-pricing {
+        padding: 60px 0;
+    }
+    
+    .cat-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .cat-pricing-card {
+        padding: 25px 20px;
+    }
+    
+    .cat-pricing-card.featured {
+        transform: none;
+    }
+    
+    .cat-pricing-card.featured:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+    
+    .cat-icon {
+        font-size: 2.5rem;
+    }
+    
+    .cat-pricing-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cat-price {
+        font-size: 1.8rem;
+    }
+    
     .locations-hero-title {
         font-size: 2.5rem;
     }
@@ -4236,6 +4269,130 @@ html {
     padding: 8px 0;
     color: var(--text-dark);
     font-weight: 500;
+}
+
+/* Cat Services Pricing Section */
+.cat-services-pricing {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--neutral-grey) 0%, #f0f8ff 100%);
+    position: relative;
+}
+
+.cat-services-pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="catGrain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="%23000" opacity="0.03"/><circle cx="10" cy="60" r="0.5" fill="%23000" opacity="0.03"/><circle cx="90" cy="40" r="0.5" fill="%23000" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23catGrain)"/></svg>');
+    pointer-events: none;
+}
+
+.cat-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.cat-pricing-card {
+    background: var(--accent-white);
+    border-radius: var(--border-radius-lg);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 197, 245, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-teal), var(--accent-yellow));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.cat-pricing-card:hover::before {
+    transform: scaleX(1);
+}
+
+.cat-pricing-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 197, 245, 0.15);
+    border-color: var(--primary-teal);
+}
+
+.cat-pricing-card.featured {
+    border-color: var(--accent-yellow);
+    transform: scale(1.05);
+}
+
+.cat-pricing-card.featured:hover {
+    transform: translateY(-8px) scale(1.07);
+}
+
+.cat-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.cat-pricing-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cat-pricing-details {
+    margin-bottom: 25px;
+}
+
+.cat-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-teal);
+    margin-bottom: 10px;
+}
+
+.cat-frequency {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.cat-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+.cat-service-list li {
+    padding: 8px 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 25px;
+}
+
+.cat-service-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-teal);
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .addon-services {
