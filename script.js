@@ -311,7 +311,7 @@ function initializeSimpleEstimator() {
 
 function calculateSimplePrice() {
     // Find all price value elements and update them
-    const priceElements = document.querySelectorAll('#priceValue');
+    const priceElements = document.querySelectorAll('.price-value');
     
     // Get values from the first available form (they should be the same)
     const frequencySelect = document.getElementById('frequency');
