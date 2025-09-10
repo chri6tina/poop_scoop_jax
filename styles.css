@@ -555,6 +555,8 @@ body {
 .mission {
     padding: 80px 0;
     background: var(--accent-white);
+    width: 100%;
+    display: block;
 }
 
 .mission-content {
@@ -562,6 +564,9 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .mission-text {
@@ -590,6 +595,7 @@ body {
     border-radius: var(--border-radius-lg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .value-item:hover {
