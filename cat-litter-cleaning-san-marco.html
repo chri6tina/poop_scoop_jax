@@ -93,6 +93,85 @@
                         <span>Premium Service</span>
                     </div>
                 </div>
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">🐱 Cat Litter Box Service Calculator</h3>
+                            <p class="estimator-subtitle">Get an instant quote for your cat's litter box cleaning needs</p>
+                        </div>
+                        <div class="estimator-form">
+                            <div class="form-group">
+                                <label for="catCount">How many cats do you have?</label>
+                                <select id="catCount" name="catCount" required>
+                                    <option value="1">1 Cat</option>
+                                    <option value="2">2 Cats</option>
+                                    <option value="3">3 Cats</option>
+                                    <option value="4">4+ Cats</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="litterBoxCount">How many litter boxes?</label>
+                                <select id="litterBoxCount" name="litterBoxCount" required>
+                                    <option value="1">1 Litter Box</option>
+                                    <option value="2">2 Litter Boxes</option>
+                                    <option value="3">3 Litter Boxes</option>
+                                    <option value="4">4+ Litter Boxes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="litterType">What type of litter do you use?</label>
+                                <select id="litterType" name="litterType" required>
+                                    <option value="clay">Clay Litter</option>
+                                    <option value="clumping">Clumping Litter</option>
+                                    <option value="crystal">Crystal Litter</option>
+                                    <option value="natural">Natural/Biodegradable</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceFrequency">How often do you need service?</label>
+                                <select id="serviceFrequency" name="serviceFrequency" required>
+                                    <option value="weekly">Weekly (4x/month)</option>
+                                    <option value="bi-weekly">Bi-Weekly (2x/month)</option>
+                                    <option value="monthly">Monthly (1x/month)</option>
+                                    <option value="one-time">One-Time Service</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="deepClean" name="deepClean">
+                                    <span class="checkmark"></span>
+                                    Deep Clean Service (+$15)
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="odorControl" name="odorControl">
+                                    <span class="checkmark"></span>
+                                    Odor Control Treatment (+$5)
+                                </label>
+                            </div>
+                            <div class="estimate-result">
+                                <div class="price-display">
+                                    <span class="price-label">Your Monthly Cost:</span>
+                                    <span class="price-value" id="catPriceValue">$0</span>
+                                </div>
+                                <div class="price-breakdown" id="catPriceBreakdown">
+                                    <small>Per visit: $0 • Monthly total: $0</small>
+                                </div>
+                                <div class="pricing-note">
+                                    <div class="note-icon">💡</div>
+                                    <div class="note-text">
+                                        <strong>Single box starts at $20/visit</strong><br>
+                                        Multiple boxes get bulk discounts!
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary" onclick="openCatEstimateModal()">
+                                🐱 Get My Cat Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
