@@ -722,16 +722,33 @@ body {
     line-height: 1.6;
 }
 
-/* Service card as link */
+/* Service card as link - remove all link styling */
 a.service-card {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
     display: block;
+    cursor: pointer;
 }
 
 a.service-card:hover {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a.service-card:visited {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a.service-card:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+    outline: none;
+}
+
+a.service-card:active {
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 /* Locations Section */
