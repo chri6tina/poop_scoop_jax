@@ -722,6 +722,18 @@ body {
     line-height: 1.6;
 }
 
+/* Service card as link */
+a.service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a.service-card:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Locations Section */
 .locations {
     padding: var(--section-padding);
