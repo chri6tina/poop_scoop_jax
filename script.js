@@ -459,6 +459,16 @@ function initializeFormHandlers() {
             this.reset();
         });
     }
+    
+    // Handle cat contact form
+    const catContactForm = document.getElementById('catContactForm');
+    if (catContactForm) {
+        catContactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            showCatThankYouPopup();
+            this.reset();
+        });
+    }
 }
 
 // Initialize scroll-to-top button
@@ -537,6 +547,84 @@ function showThankYouPopup() {
 }
 
 function closeThankYouPopup() {
+    const overlay = document.querySelector('div[style*="position: fixed"]');
+    if (overlay) {
+        overlay.remove();
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Cat-specific thank you popup functionality
+function showCatThankYouPopup() {
+    // Create popup overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease-out;
+    `;
+    
+    // Create popup content
+    const popup = document.createElement('div');
+    popup.style.cssText = `
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.3s ease-out;
+        position: relative;
+    `;
+    
+    popup.innerHTML = `
+        <div style="font-size: 4rem; margin-bottom: 20px;">🐱</div>
+        <h2 style="color: #333; margin-bottom: 20px; font-family: 'Fredoka One', cursive;">Thank You!</h2>
+        <p style="color: #666; margin-bottom: 25px; line-height: 1.6;">
+            Thank you for your interest in our cat litter box cleaning service! 
+            We'll contact you within 24 hours to discuss your cat's litter box needs and provide a detailed quote.
+        </p>
+        <p style="color: #666; margin-bottom: 30px; font-size: 0.9rem;">
+            In the meantime, feel free to call us at <strong style="color: #00c5f5;">(904) 203-5012</strong> 
+            if you have any questions about our cat services.
+        </p>
+        <button onclick="closeCatThankYouPopup()" style="
+            background: linear-gradient(135deg, #00c5f5, #00a8d4);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            Close
+        </button>
+    `;
+    
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    
+    // Close on overlay click
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeCatThankYouPopup();
+        }
+    });
+}
+
+function closeCatThankYouPopup() {
     const overlay = document.querySelector('div[style*="position: fixed"]');
     if (overlay) {
         overlay.remove();
