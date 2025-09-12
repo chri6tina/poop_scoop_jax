@@ -14,81 +14,163 @@
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="ljH0BCAGdSMaiPdTyFCqNg" async></script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation will be loaded by JavaScript -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">
-                    <div class="logo-icon">🐱</div>
-                    <span class="logo-text">Poop Rescue</span>
-                </a>
+                <img src="public/poopscoopjaxlogo.png" alt="Poop Rescue Logo" class="logo-image">
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Dog Services</a>
-                <a href="litter-box-cleaning-jacksonville.html" class="nav-link active">Cat Services</a>
-                <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="locations.html" class="nav-link">Locations</a>
-                <a href="litter-box-cleaning-jacksonville.html#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="mobile-nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/locations">Locations</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#testimonials">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="/#contact" class="cta-button">Get Free Quote</a></li>
+            </ul>
+            <div class="mobile-nav-menu" id="mobileNavMenu">
+                <ul>
+                    <li><a href="/" onclick="closeMobileNav()">Home</a></li>
+                    <li><a href="/#services" onclick="closeMobileNav()">Services</a></li>
+                    <li><a href="/locations" onclick="closeMobileNav()">Locations</a></li>
+                    <li><a href="/pricing" onclick="closeMobileNav()">Pricing</a></li>
+                    <li><a href="/#about" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="/#testimonials" onclick="closeMobileNav()">Reviews</a></li>
+                    <li><a href="/#faq" onclick="closeMobileNav()">FAQ</a></li>
+                    <li><a href="/#contact" class="cta-button" onclick="closeMobileNav()">Get Free Quote</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav-menu">
-        <a href="index.html" class="mobile-nav-link">Dog Services</a>
-        <a href="litter-box-cleaning-jacksonville.html" class="mobile-nav-link active">Cat Services</a>
-        <a href="pricing.html" class="mobile-nav-link">Pricing</a>
-        <a href="locations.html" class="mobile-nav-link">Locations</a>
-        <a href="litter-box-cleaning-jacksonville.html#contact" class="mobile-nav-link">Contact</a>
-    </div>
-
     <!-- Hero Section -->
-    <section class="cat-hero">
-        <div class="cat-hero-bg"></div>
+    <section class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">🏖️</span>
-                    <span>Luxury Beachside Cat Service</span>
-                </div>
-                <h1 class="hero-title">Luxury Cat Litter Box Cleaning in Ponte Vedra!</h1>
-                <p class="hero-subtitle">Premium cat litter box cleaning service for Ponte Vedra Beach and Sawgrass. We specialize in gated communities and exclusive beachside properties with luxury cat care standards.</p>
-                <div class="hero-cities">
-                    <span class="city-item">Ponte Vedra Beach</span>
-                    <span class="city-separator">•</span>
-                    <span class="city-item">Sawgrass</span>
-                    <span class="city-separator">•</span>
-                    <span class="city-item">Gated Communities</span>
-                    <span class="city-separator">•</span>
-                    <span class="city-item">Beachfront Properties</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">
-                        <span class="btn-icon">🐱</span>
-                        Schedule Cat Service
-                    </a>
-                    <a href="tel:9042035012" class="btn-secondary">
-                        <span class="btn-icon">📞</span>
-                        (904) 203-5012
-                    </a>
-                </div>
-                <div class="hero-trust-pills">
-                    <div class="trust-pill">
-                        <span class="trust-pill-icon">🏖️</span>
-                        <span>Gated Communities</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🏖️</span>
+                        <span>Luxury Beachside Service</span>
                     </div>
-                    <div class="trust-pill">
-                        <span class="trust-pill-icon">🐱</span>
-                        <span>Cat Experts</span>
+                    <h1 class="hero-title">Luxury Cat Litter Box Cleaning in Ponte Vedra!</h1>
+                    <p class="hero-subtitle">Premium cat litter box cleaning service for Ponte Vedra Beach and Sawgrass. We specialize in gated communities and exclusive beachside properties with luxury cat care standards.</p>
+                    <div class="hero-cities">
+                        <span class="city-item">Ponte Vedra Beach</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Sawgrass</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Gated Communities</span>
+                        <span class="city-separator">•</span>
+                        <span class="city-item">Beachfront Properties</span>
                     </div>
-                    <div class="trust-pill">
-                        <span class="trust-pill-icon">💎</span>
-                        <span>Luxury Service</span>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">
+                            <span class="btn-icon">🐱</span>
+                            Schedule Cat Service
+                        </a>
+                        <a href="tel:9042035012" class="btn-secondary">
+                            <span class="btn-icon">📞</span>
+                            (904) 203-5012
+                        </a>
+                    </div>
+                    <div class="hero-trust-pills">
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🏖️</span>
+                            <span>Gated Communities</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">🐱</span>
+                            <span>Cat Experts</span>
+                        </div>
+                        <div class="trust-pill">
+                            <span class="trust-pill-icon">💎</span>
+                            <span>Luxury Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <div class="estimator-header">
+                            <h3 class="estimator-title">🐱 Cat Litter Box Service Calculator</h3>
+                            <p class="estimator-subtitle">Get an instant quote for your cat's litter box cleaning needs</p>
+                        </div>
+                        <div class="estimator-form">
+                            <div class="form-group">
+                                <label for="catCount">How many cats do you have?</label>
+                                <select id="catCount" name="catCount" required>
+                                    <option value="1">1 Cat</option>
+                                    <option value="2">2 Cats</option>
+                                    <option value="3">3 Cats</option>
+                                    <option value="4">4+ Cats</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="litterBoxCount">How many litter boxes?</label>
+                                <select id="litterBoxCount" name="litterBoxCount" required>
+                                    <option value="1">1 Litter Box</option>
+                                    <option value="2">2 Litter Boxes</option>
+                                    <option value="3">3 Litter Boxes</option>
+                                    <option value="4">4+ Litter Boxes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="litterType">What type of litter do you use?</label>
+                                <select id="litterType" name="litterType" required>
+                                    <option value="clay">Clay Litter</option>
+                                    <option value="clumping">Clumping Litter</option>
+                                    <option value="crystal">Crystal Litter</option>
+                                    <option value="natural">Natural/Biodegradable</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceFrequency">How often do you need service?</label>
+                                <select id="serviceFrequency" name="serviceFrequency" required>
+                                    <option value="weekly">Weekly (4x/month)</option>
+                                    <option value="bi-weekly">Bi-Weekly (2x/month)</option>
+                                    <option value="monthly">Monthly (1x/month)</option>
+                                    <option value="one-time">One-Time Service</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="deepClean" name="deepClean">
+                                    <span class="checkmark"></span>
+                                    Deep Clean Service (+$15)
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="odorControl" name="odorControl">
+                                    <span class="checkmark"></span>
+                                    Odor Control Treatment (+$5)
+                                </label>
+                            </div>
+                            <div class="estimate-result">
+                                <div class="price-display">
+                                    <span class="price-label">Your Monthly Cost:</span>
+                                    <span class="price-value" id="catPriceValue">$0</span>
+                                </div>
+                                <div class="price-breakdown" id="catPriceBreakdown">
+                                    <small>Per visit: $0 • Monthly total: $0</small>
+                                </div>
+                                <div class="pricing-note">
+                                    <div class="note-icon">💡</div>
+                                    <div class="note-text">
+                                        <strong>Single box starts at $20/visit</strong><br>
+                                        Multiple boxes get bulk discounts!
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-primary" onclick="openCatEstimateModal()">
+                                🐱 Get My Cat Quote
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
