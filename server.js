@@ -10,10 +10,18 @@ const PORT = 3000;
 // Serve static files from the current directory
 app.use(express.static('.', {
   setHeaders: (res, path) => {
-    if (path.endsWith('.html')) {
-      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-      res.setHeader('Pragma', 'no-cache');
-      res.setHeader('Expires', '0');
+    // Static assets (CSS, JS, images) - long cache
+    if (path.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+    // HTML files - short cache for development, longer for production
+    else if (path.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'public, max-age=300, s-maxage=3600');
+      res.setHeader('ETag', `"${Date.now()}"`);
+    }
+    // Other files - moderate cache
+    else {
+      res.setHeader('Cache-Control', 'public, max-age=300');
     }
   }
 }));

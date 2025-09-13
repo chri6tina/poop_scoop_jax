@@ -9,7 +9,8 @@
     "start": "node server.js",
     "build": "echo 'Static site - no build process needed'",
     "preview": "node server.js",
-    "vercel-build": "echo 'Static site - no build process needed'"
+    "vercel-build": "echo 'Static site - no build process needed'",
+    "update-cache": "node update-cache-version.js"
   },
   "keywords": [
     "dog-waste-removal",
