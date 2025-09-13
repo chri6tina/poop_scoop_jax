@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Area Request - Poop Rescue Jacksonville</title>
     <meta name="description" content="Don't see your Jacksonville area listed? Request custom dog waste removal service for your neighborhood. We're expanding our coverage and would love to serve your community.">
+    <link rel="canonical" href="https://www.poopscoopjax.com/custom-area-request">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,10 +17,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <div class="logo-icon">🐕‍🦺</div>
-                <span class="logo-text">Poop Rescue</span>
+                <img src="public/poopscoopjaxlogo.png" alt="Poop Rescue Logo" class="logo-image">
             </div>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu">
+                ☰
+            </button>
             <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
                 <li class="nav-dropdown">
                     <a href="/#services" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
                     <ul class="dropdown-menu">
@@ -29,11 +33,31 @@
                     </ul>
                 </li>
                 <li><a href="/locations">Locations</a></li>
+                <li><a href="/pricing">Pricing</a></li>
                 <li><a href="/#about">About</a></li>
                 <li><a href="/#testimonials">Reviews</a></li>
                 <li><a href="/#faq">FAQ</a></li>
                 <li><a href="/#contact" class="cta-button">Get Free Quote</a></li>
             </ul>
+            <div class="mobile-nav-menu" id="mobileNavMenu">
+                <ul>
+                    <li><a href="/" onclick="closeMobileNav()">Home</a></li>
+                    <li class="mobile-nav-dropdown">
+                        <a href="/#services" class="mobile-dropdown-toggle" onclick="toggleMobileDropdown(event)">Services <span class="mobile-dropdown-arrow">▼</span></a>
+                        <ul class="mobile-dropdown-menu">
+                            <li><a href="/#services" onclick="closeMobileNav()">🐕 Dog Scooping</a></li>
+                            <li><a href="/litter-box-cleaning-jacksonville" onclick="closeMobileNav()">🐱 Cat Scoop</a></li>
+                            <li><a href="/litter-robot-cleaning-service" onclick="closeMobileNav()">🤖 Litter Robot Cleaning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/locations" onclick="closeMobileNav()">Locations</a></li>
+                    <li><a href="/pricing" onclick="closeMobileNav()">Pricing</a></li>
+                    <li><a href="/#about" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="/#testimonials" onclick="closeMobileNav()">Reviews</a></li>
+                    <li><a href="/#faq" onclick="closeMobileNav()">FAQ</a></li>
+                    <li><a href="/#contact" class="cta-button" onclick="closeMobileNav()">Get Free Quote</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -124,34 +148,6 @@
                 </div>
             </div>
 
-            <div class="why-choose-us">
-                <h2>Why Choose Poop Rescue for Your Area?</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🗺️</div>
-                        <h3>Growing Service Area</h3>
-                        <p>We're committed to expanding our coverage to serve more Jacksonville communities.</p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🤝</div>
-                        <h3>Community Focused</h3>
-                        <p>We build lasting relationships within communities and become a trusted local service provider.</p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🎯</div>
-                        <h3>Custom Solutions</h3>
-                        <p>We'll work with you to create service solutions that fit your area's unique needs and challenges.</p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🚀</div>
-                        <h3>New Area Benefits</h3>
-                        <p>New service areas often receive special introductory rates and priority scheduling.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
