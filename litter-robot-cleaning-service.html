@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Litter Robot Cleaning Service Jacksonville FL | Professional Automated Litter Box Maintenance | Poop Rescue</title>
+    <meta name="description" content="Professional litter robot cleaning service in Jacksonville FL. Expert maintenance, deep cleaning, and sanitizing for Litter-Robot, CatGenie, and other automated litter boxes. Keep your smart litter box running perfectly.">
+    <meta name="keywords" content="litter robot cleaning Jacksonville FL, automated litter box cleaning service, Litter-Robot maintenance Jacksonville, CatGenie cleaning service, smart litter box cleaning, automated cat litter maintenance">
+    <link rel="canonical" href="https://www.poopscoopjax.com/litter-robot-cleaning-service">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ljH0BCAGdSMaiPdTyFCqNg" async></script>
+    
+    <!-- Structured Data for Local SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Poop Rescue - Litter Robot Cleaning Service",
+        "description": "Professional litter robot cleaning and maintenance service for automated cat litter boxes",
+        "url": "https://pooprescue.com/litter-robot-cleaning-service",
+        "telephone": "(904) 203-5012",
+        "email": "service@poopscoopjax.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Jacksonville",
+            "addressRegion": "FL",
+            "postalCode": "32225",
+            "addressCountry": "US"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Jacksonville, FL"
+        },
+        "serviceType": "Litter Robot Cleaning Service"
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="public/poopscoopjaxlogo.png" alt="Poop Rescue Logo" class="logo-image">
+            </div>
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Toggle navigation menu">
+                ☰
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/locations">Locations</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#testimonials">Reviews</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="/#contact" class="cta-button">Get Free Quote</a></li>
+            </ul>
+            <div class="mobile-nav-menu" id="mobileNavMenu">
+                <ul>
+                    <li><a href="/" onclick="closeMobileNav()">Home</a></li>
+                    <li><a href="/#services" onclick="closeMobileNav()">Services</a></li>
+                    <li><a href="/locations" onclick="closeMobileNav()">Locations</a></li>
+                    <li><a href="/pricing" onclick="closeMobileNav()">Pricing</a></li>
+                    <li><a href="/#about" onclick="closeMobileNav()">About</a></li>
+                    <li><a href="/#testimonials" onclick="closeMobileNav()">Reviews</a></li>
+                    <li><a href="/#faq" onclick="closeMobileNav()">FAQ</a></li>
+                    <li><a href="/#contact" class="cta-button" onclick="closeMobileNav()">Get Free Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Professional Litter Robot Cleaning Service</h1>
+                    <p class="hero-subtitle">Expert maintenance and deep cleaning for your automated litter box. We service Litter-Robot, CatGenie, and other smart litter boxes to keep them running perfectly.</p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🤖</span>
+                            <span>All Robot Models</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🧽</span>
+                            <span>Deep Sanitizing</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⚙️</span>
+                            <span>Professional Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-estimator">
+                    <div class="estimator-card">
+                        <h3>Get Your Free Litter Robot Quote</h3>
+                        <form id="litterRobotForm">
+                            <div class="form-group">
+                                <label for="robotName">Your Name</label>
+                                <input type="text" id="robotName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="robotEmail">Email</label>
+                                <input type="email" id="robotEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="robotPhone">Phone</label>
+                                <input type="tel" id="robotPhone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="robotModel">Litter Robot Model</label>
+                                <select id="robotModel" name="robot_model" required>
+                                    <option value="">Select Model</option>
+                                    <option value="litter-robot-3">Litter-Robot 3</option>
+                                    <option value="litter-robot-4">Litter-Robot 4</option>
+                                    <option value="catgenie">CatGenie</option>
+                                    <option value="other">Other Model</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="robotFrequency">Service Frequency</label>
+                                <select id="robotFrequency" name="frequency" required>
+                                    <option value="">Select</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="one-time">One-Time Deep Clean</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary">Get My Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Professional Litter Robot Services</h2>
+            <p class="section-subtitle">Comprehensive cleaning and maintenance for all automated litter box models</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧽</div>
+                    <h3>Deep Sanitization</h3>
+                    <p>Complete disassembly, deep cleaning, and sanitizing of all litter robot components to eliminate odors and bacteria.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Mechanical Maintenance</h3>
+                    <p>Professional maintenance of moving parts, sensors, and mechanical components to ensure optimal performance.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Calibration and optimization of sensors, timing, and operation cycles for peak efficiency and reliability.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p>Safe, non-toxic cleaning products specifically designed for automated litter boxes and pet safety.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>App & Connectivity</h3>
+                    <p>Testing and troubleshooting of Wi-Fi connectivity, mobile apps, and smart features.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Service Reports</h3>
+                    <p>Detailed service reports with recommendations for optimal performance and maintenance schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Clean Section -->
+    <section id="how-to-clean" class="how-to-clean">
+        <div class="container">
+            <h2 class="section-title">How We Clean Your Litter Robot</h2>
+            <p class="section-subtitle">Our comprehensive cleaning process ensures your automated litter box stays fresh and functional</p>
+            
+            <div class="cleaning-process">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Assessment</h3>
+                        <p>We thoroughly inspect your litter robot for any mechanical issues, sensor problems, or areas requiring special attention.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Complete Disassembly</h3>
+                        <p>Carefully disassemble all removable components including the globe, waste drawer, bonnet, and base unit.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Deep Sanitization</h3>
+                        <p>Use professional-grade sanitizers and cleaning agents to eliminate bacteria, odors, and residue from all surfaces.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Mechanical Maintenance</h3>
+                        <p>Clean and lubricate moving parts, check sensors, and ensure all mechanical components are functioning properly.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Reassembly & Testing</h3>
+                        <p>Carefully reassemble all components and test all functions including cycling, sensors, and connectivity features.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Quality Assurance</h3>
+                        <p>Perform final testing and provide you with a detailed service report and maintenance recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Models Section -->
+    <section class="supported-models">
+        <div class="container">
+            <h2 class="section-title">Supported Litter Robot Models</h2>
+            <p class="section-subtitle">We service all major automated litter box brands and models</p>
+            
+            <div class="models-grid">
+                <div class="model-card">
+                    <div class="model-icon">🤖</div>
+                    <h3>Litter-Robot 3</h3>
+                    <p>Complete cleaning and maintenance for the Litter-Robot 3 Connect and standard models</p>
+                    <ul>
+                        <li>Globe sanitization</li>
+                        <li>Waste drawer cleaning</li>
+                        <li>Sensor calibration</li>
+                        <li>App connectivity testing</li>
+                    </ul>
+                </div>
+                
+                <div class="model-card">
+                    <div class="model-icon">🤖</div>
+                    <h3>Litter-Robot 4</h3>
+                    <p>Professional service for the latest Litter-Robot 4 with advanced features</p>
+                    <ul>
+                        <li>Advanced sensor cleaning</li>
+                        <li>OdorTrap maintenance</li>
+                        <li>Smart scale calibration</li>
+                        <li>Wi-Fi connectivity optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="model-card">
+                    <div class="model-icon">🚿</div>
+                    <h3>CatGenie</h3>
+                    <p>Specialized cleaning for CatGenie self-washing litter boxes</p>
+                    <ul>
+                        <li>Washing system maintenance</li>
+                        <li>Drain line cleaning</li>
+                        <li>Cartridge replacement</li>
+                        <li>Water system sanitization</li>
+                    </ul>
+                </div>
+                
+                <div class="model-card">
+                    <div class="model-icon">⚡</div>
+                    <h3>Other Models</h3>
+                    <p>We service other automated litter box brands and models</p>
+                    <ul>
+                        <li>PetSafe ScoopFree</li>
+                        <li>Leo's Loo Too</li>
+                        <li>Pura X</li>
+                        <li>Custom solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="faq-header">
+                <h2 class="section-title">Litter Robot Cleaning FAQ</h2>
+                <p class="section-subtitle">Common questions about our automated litter box cleaning service</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-icon">🤖</div>
+                    <div class="faq-content">
+                        <h3>How often should I have my litter robot professionally cleaned?</h3>
+                        <p>We recommend professional cleaning every 2-3 months for optimal performance. Heavy-use households may benefit from monthly service, while light-use households can schedule quarterly cleanings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">🧽</div>
+                    <div class="faq-content">
+                        <h3>What's included in your litter robot cleaning service?</h3>
+                        <p>Our service includes complete disassembly, deep sanitization, mechanical maintenance, sensor cleaning, performance optimization, and comprehensive testing of all functions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">💰</div>
+                    <div class="faq-content">
+                        <h3>How much does litter robot cleaning cost?</h3>
+                        <p>Pricing varies by model and service level. Basic cleaning starts at $45, while comprehensive maintenance packages start at $75. Contact us for a personalized quote based on your specific model and needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">⏰</div>
+                    <div class="faq-content">
+                        <h3>How long does the cleaning process take?</h3>
+                        <p>Most litter robot cleaning services take 60-90 minutes, depending on the model and level of maintenance required. We work efficiently to minimize disruption to your cat's routine.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">🏠</div>
+                    <div class="faq-content">
+                        <h3>Do you come to my home or do I bring the robot to you?</h3>
+                        <p>We provide in-home service for your convenience. Our technicians will come to your location with all necessary tools and cleaning supplies, ensuring minimal disruption to your household.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">🔧</div>
+                    <div class="faq-content">
+                        <h3>Can you fix mechanical issues with my litter robot?</h3>
+                        <p>Yes! We can diagnose and repair many common mechanical issues including sensor problems, motor issues, and connectivity problems. We also provide replacement parts when needed.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">🌿</div>
+                    <div class="faq-content">
+                        <h3>Are your cleaning products safe for my cats?</h3>
+                        <p>Absolutely! We use only pet-safe, non-toxic cleaning products specifically designed for automated litter boxes. All products are thoroughly rinsed and safe for immediate use.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-icon">📱</div>
+                    <div class="faq-content">
+                        <h3>Do you help with app and connectivity issues?</h3>
+                        <p>Yes! We troubleshoot Wi-Fi connectivity, mobile app issues, and smart features. We'll ensure your litter robot is properly connected and all smart features are working correctly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Professional Litter Robot Cleaning?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Extend Lifespan</h3>
+                    <p>Regular professional maintenance can extend your litter robot's lifespan by 2-3 years, saving you hundreds in replacement costs.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌬️</div>
+                    <h3>Eliminate Odors</h3>
+                    <p>Deep sanitization removes stubborn odors and bacteria that regular cleaning can't reach, keeping your home fresh.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Optimal Performance</h3>
+                    <p>Professional calibration ensures your litter robot operates at peak efficiency with fewer malfunctions and better reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Schedule Your Litter Robot Cleaning?</h2>
+                    <p>Get your free quote today and keep your automated litter box running perfectly. Professional service for all major brands and models.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>(904) 203-5012</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>info@pooprescue.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Serving Jacksonville & Surrounding Areas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Tell us about your litter robot model and needs" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Get My Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Poop Rescue</h4>
+                    <p>Jacksonville's trusted pet waste removal service, now offering professional cat litter box and litter robot cleaning.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#services">Dog Waste Removal</a></li>
+                        <li><a href="/litter-box-cleaning-jacksonville">Cat Litter Cleaning</a></li>
+                        <li><a href="/litter-robot-cleaning-service">Litter Robot Cleaning</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/locations">Service Areas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/#about">About Us</a></li>
+                        <li><a href="/#testimonials">Reviews</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="custom-area-request.html">Request New Area</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p>📞 (904) 203-5012</p>
+                        <p>✉️ info@pooprescue.com</p>
+                        <p>📍 Jacksonville, FL</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Poop Rescue. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
