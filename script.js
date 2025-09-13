@@ -36,6 +36,25 @@ function closeMobileNav() {
     toggleButton.innerHTML = '☰';
 }
 
+// Mobile Dropdown Functions
+function toggleMobileDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    const dropdown = event.target.closest('.mobile-nav-dropdown');
+    const isActive = dropdown.classList.contains('active');
+    
+    // Close all other dropdowns
+    document.querySelectorAll('.mobile-nav-dropdown').forEach(dd => {
+        dd.classList.remove('active');
+    });
+    
+    // Toggle current dropdown
+    if (!isActive) {
+        dropdown.classList.add('active');
+    }
+}
+
 // Close mobile nav when clicking outside
 document.addEventListener('click', function(event) {
     const mobileNav = document.getElementById('mobileNavMenu');

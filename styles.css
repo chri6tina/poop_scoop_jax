@@ -110,6 +110,122 @@ body {
     background: var(--neutral-grey);
 }
 
+/* Navigation Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--accent-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    z-index: 1000;
+    border: 1px solid var(--border-light);
+    padding: 8px 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.dropdown-menu a:hover {
+    background: var(--primary-teal);
+    color: var(--accent-white);
+    transform: translateX(4px);
+}
+
+/* Mobile Dropdown */
+.mobile-nav-dropdown {
+    position: relative;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mobile-dropdown-arrow {
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.mobile-nav-dropdown.active .mobile-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(0, 197, 245, 0.05);
+    margin: 8px 0;
+    border-radius: var(--border-radius);
+}
+
+.mobile-nav-dropdown.active .mobile-dropdown-menu {
+    max-height: 200px;
+}
+
+.mobile-dropdown-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 20px 10px 40px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.mobile-dropdown-menu a:hover {
+    background: var(--primary-teal);
+    color: var(--accent-white);
+}
+
 .cta-button {
     background: var(--primary-mint) !important;
     color: var(--accent-white) !important;
