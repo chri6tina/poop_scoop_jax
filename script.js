@@ -723,26 +723,21 @@ function calculateCatPrice() {
     const deepClean = document.getElementById('deepClean')?.checked || false;
     const odorControl = document.getElementById('odorControl')?.checked || false;
     
-    // Base pricing for cat services
-    let perVisitPrice = 0;
+    // Base pricing for cat services - $75 per service
+    let perVisitPrice = 75;
     
-    // Single box pricing
-    if (litterBoxCount === 1) {
-        perVisitPrice = 20; // $20 per visit for single box
-    } else if (litterBoxCount === 2) {
-        perVisitPrice = 30; // $30 per visit for 2 boxes
-    } else if (litterBoxCount === 3) {
-        perVisitPrice = 45; // $45 per visit for 3 boxes
-    } else {
-        perVisitPrice = litterBoxCount * 12; // $12 per box for 4+ boxes
+    // Multiple boxes get bulk discounts
+    if (litterBoxCount > 1) {
+        // Additional boxes get discounted rate
+        perVisitPrice = 75 + ((litterBoxCount - 1) * 50); // $75 for first box, $50 per additional box
     }
     
-    // Add litter type premium
+    // Add litter type premium (only for premium types)
     const litterTypePremiums = {
         'clay': 0,        // No premium for clay
-        'clumping': 2,    // +$2 for clumping
-        'crystal': 3,     // +$3 for crystal
-        'natural': 5      // +$5 for natural/biodegradable
+        'clumping': 0,    // No premium for clumping
+        'crystal': 5,     // +$5 for crystal
+        'natural': 10     // +$10 for natural/biodegradable
     };
     perVisitPrice += litterTypePremiums[litterType] || 0;
     
@@ -793,19 +788,16 @@ function openCatEstimateModal() {
     const deepClean = document.getElementById('deepClean')?.checked || false;
     const odorControl = document.getElementById('odorControl')?.checked || false;
     
-    // Calculate pricing
-    let perVisitPrice = 0;
-    if (litterBoxCount === '1') {
-        perVisitPrice = 20;
-    } else if (litterBoxCount === '2') {
-        perVisitPrice = 30;
-    } else if (litterBoxCount === '3') {
-        perVisitPrice = 45;
-    } else {
-        perVisitPrice = parseInt(litterBoxCount) * 12;
+    // Calculate pricing - $75 base price for cat services
+    let perVisitPrice = 75;
+    
+    // Multiple boxes get bulk discounts
+    const boxCount = parseInt(litterBoxCount) || 1;
+    if (boxCount > 1) {
+        perVisitPrice = 75 + ((boxCount - 1) * 50); // $75 for first box, $50 per additional box
     }
     
-    const litterTypePremiums = { 'clay': 0, 'clumping': 2, 'crystal': 3, 'natural': 5 };
+    const litterTypePremiums = { 'clay': 0, 'clumping': 0, 'crystal': 5, 'natural': 10 };
     perVisitPrice += litterTypePremiums[litterType] || 0;
     
     if (deepClean) perVisitPrice += 15;
